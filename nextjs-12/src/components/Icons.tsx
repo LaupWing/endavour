@@ -1,5 +1,6 @@
 import { IconType } from "react-icons"
-import { AiFillInstagram } from "react-icons/ai"
+import { AiFillInstagram, AiOutlineTwitter, AiFillYoutube } from "react-icons/ai"
+import { FaFacebookSquare, FaPinterest } from "react-icons/fa"
 
 export const InstagramIcon: IconType = (props) => {
    return (
@@ -9,33 +10,33 @@ export const InstagramIcon: IconType = (props) => {
    )
 }
 
-export const InstagramIcon: IconType = (props) => {
+export const FacebookIcon: IconType = (props) => {
    return (
-      <AiFillInstagram 
+      <FaFacebookSquare 
          {...props}
       />
    )
 }
 
-export const InstagramIcon: IconType = (props) => {
+export const TwitterIcon: IconType = (props) => {
    return (
-      <AiFillInstagram 
+      <AiOutlineTwitter 
          {...props}
       />
    )
 }
 
-export const InstagramIcon: IconType = (props) => {
+export const YoutubeIcon: IconType = (props) => {
    return (
-      <AiFillInstagram 
+      <AiFillYoutube 
          {...props}
       />
    )
 }
 
-export const InstagramIcon: IconType = (props) => {
+export const PinterestIcon: IconType = (props) => {
    return (
-      <AiFillInstagram 
+      <FaPinterest 
          {...props}
       />
    )
