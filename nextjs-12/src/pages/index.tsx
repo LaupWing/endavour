@@ -3,7 +3,7 @@ import axios from "@/utils/axios"
 import { playfair, poppins } from "@/utils/fonts"
 import { BsSearch } from "react-icons/bs"
 import { FiExternalLink } from "react-icons/fi"
-import { Hero } from "@/components/Hero"
+import { Hero } from "@/components"
 
 interface PageProps {
    data: ApiResponse
@@ -30,7 +30,7 @@ const Home:NextPage<PageProps> = ({data}) => {
             </div>
          </header>
          <section className="py-10">
-            <Hero 
+            <Hero
                artObject={data.artObjects[0]}
             />
             <div className="grid grid-cols-3 gap-10 py-10">
