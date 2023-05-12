@@ -52,12 +52,17 @@ const Home:NextPage<PageProps> = ({data}) => {
                </div>
                <img src={data.artObjects[0].webImage.url} alt="" />
             </div>
-            <div className="grid grid-cols-3">
-               {[...data.artObjects].splice(1).map(item => (
+            <div className="grid grid-cols-3 gap-10 py-10">
+               {[...data.artObjects].splice(1).map((item, i) => (
                   <div
                      key={item.id}
+                     className={`${i % 3 === 0 ? "col-span-2 aspect-video" : ""}`}
                   >
-                     <img src={item.webImage.url} alt="" />
+                     <img 
+                        className="h-full w-full object-cover" 
+                        src={item.webImage.url} 
+                        alt="Artwork" 
+                     />
                   </div>
                ))}
             </div>
