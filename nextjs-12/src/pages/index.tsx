@@ -1,13 +1,13 @@
-import { GetServerSideProps } from "next"
+import { GetServerSideProps, NextPage } from "next"
 import axios from "@/utils/axios"
 import { playfair, poppins } from "@/utils/fonts"
 import { BsSearch } from "react-icons/bs"
 
 interface PageProps {
-
+   data: ApiResponse
 }
 
-export default function Home({data}: any) {
+const Home:NextPage<PageProps> = ({data}) => {
    console.log(data)
    return (
       <main
@@ -31,7 +31,7 @@ export default function Home({data}: any) {
       </main>
    )
 }
-
+export default Home
 export const getServerSideProps:GetServerSideProps<PageProps> = async () => {
    const res = await axios.get("")
    const data = res.data
