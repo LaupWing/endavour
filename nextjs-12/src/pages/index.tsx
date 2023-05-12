@@ -46,7 +46,7 @@ const Home:NextPage<PageProps> = ({data}) => {
                   <p className="mt-6">By <span className="text-accent font-bold">{data.artObjects[0].principalOrFirstMaker}</span></p>
                   <p className="text-accent italic">
                      <a href={data.artObjects[0].links.web} target="_blank" className="flex gap-2 items-center">
-                        Link to rijksmuseum <FiExternalLink className="" size={16} />
+                        Link to rijksmuseum <FiExternalLink size={16} />
                      </a>
                   </p>
                </div>
@@ -56,13 +56,20 @@ const Home:NextPage<PageProps> = ({data}) => {
                {[...data.artObjects].splice(1).map((item, i) => (
                   <div
                      key={item.id}
-                     className={`${i % 3 === 0 ? "col-span-2 aspect-video" : ""}`}
+                     className={`${i % 3 === 0 ? "col-span-2 aspect-video" : ""} flex flex-col justify-between`}
                   >
                      <img 
                         className="h-full w-full object-cover" 
                         src={item.webImage.url} 
                         alt="Artwork" 
                      />
+                     <div className="mt-2 leading-4 flex justify-between items-center">
+                        <div className="flex flex-col">
+                           <p>{item.title}</p>
+                           <p className="text-xs">By <span className="text-accent">{item.principalOrFirstMaker}</span></p>
+                        </div>
+                        <FiExternalLink className="text-accent cursor-pointer" size={16} />
+                     </div>
                   </div>
                ))}
             </div>
