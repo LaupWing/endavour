@@ -1,5 +1,5 @@
 interface ApiResponse {
-   artObjects: any[]
+   artObjects: ArtObjectType[]
    count: number
    countFacets: {
       hasimage: number,
@@ -27,6 +27,7 @@ interface ArtObjectType {
    }
    longTitle: string
    objectNumber: string
+   principalOrFirstMaker: string
    permitDownload: boolean
    productionPlaces: string[]
    showImage: boolean
