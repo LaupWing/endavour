@@ -8,13 +8,17 @@ interface PageProps {
 }
 
 export default function Home({data}: any) {
-   console.log(data)
+   // console.log(data)
    return (
       <main
-         className={`flex min-h-screen flex-col items-center justify-between p-24 ${poppins.className}`}
+         className={`flex bg-contrast min-h-screen w-screen flex-col justify-between ${poppins.className}`}
       >
-         test
-      
+         <header className="flex">
+            <h1>
+               <span>Rijks</span>
+               <span>Museum</span>
+            </h1>
+         </header>
       </main>
    )
 }
