@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-   --color-primary: 24 23 19;     /* Text */
-   --color-contrast: 242 242 242; /* Background */
-   --color-accent: 211 108 123;   /* Action elements */     
+   --color-primary: 24 23 19;       /* Text */
+   --color-contrast: 242 242 242;   /* Background */
+   --color-accent: 190 41 70;       /* Action elements */     
 }
