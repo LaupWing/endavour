@@ -3,6 +3,7 @@ import axios from "@/utils/axios"
 import { playfair, poppins } from "@/utils/fonts"
 import { BsSearch, BsArrowRightShort } from "react-icons/bs"
 import { Grid, Hero } from "@/components"
+import socials from "@/utils/socials"
 
 interface PageProps {
    data: ApiResponse
@@ -69,6 +70,21 @@ const Home:NextPage<PageProps> = ({data}) => {
                      <li>Art</li>
                   </div>
                </ul>
+            </div>
+            <div className="col-span-2 grid grid-col-1 grid-rows-3">
+               <div className="border-b border-primary flex gap-4 items-center px-4">
+                  {Object.keys(socials).map(key =>{
+                     // @ts-ignore
+                     const IconComponent = socials[key]
+                     return (
+                        <IconComponent size={16} />
+                     )
+                  })}
+               </div>
+               <div className="row-span-2 flex text-sm flex-col justify-center px-4">
+                  <p>info@rijksmuseum.nl</p>
+                  <p>+31 (0) 20 6747 000</p>
+               </div>
             </div>
          </footer>
       </main>
