@@ -10,7 +10,9 @@ export const Layout:FC<PropsWithChildren> = ({children}) => {
       >
          <div className="py-6 px-14">
             <Header />
-            {children}
+            <section className="py-10">
+               {children}
+            </section>
          </div>
          <Footer />
       </main>
