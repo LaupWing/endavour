@@ -9,6 +9,7 @@ interface PageProps {
 }
 
 const Home:NextPage<PageProps> = ({data}) => {
+   console.log(data)
    return (
       <main
          className={`flex bg-contrast py-6 px-14 min-h-screen fixed inset-0 overflow-y-auto w-screen flex-col ${poppins.className}`}
