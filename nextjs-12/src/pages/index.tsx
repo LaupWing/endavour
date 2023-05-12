@@ -1,8 +1,7 @@
-import { Inter } from "next/font/google"
 import { GetServerSideProps } from "next"
 import axios from "@/utils/axios"
+import { poppins } from "@/utils/fonts"
 
-const inter = Inter({ subsets: ["latin"] })
 
 interface PageProps {
 
@@ -12,9 +11,9 @@ export default function Home({data}: any) {
    console.log(data)
    return (
       <main
-         className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
+         className={`flex min-h-screen flex-col items-center justify-between p-24 ${poppins.className}`}
       >
-         
+         test
       
       </main>
    )
