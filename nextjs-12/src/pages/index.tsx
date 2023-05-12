@@ -2,6 +2,7 @@ import { GetServerSideProps, NextPage } from "next"
 import axios from "@/utils/axios"
 import { playfair, poppins } from "@/utils/fonts"
 import { BsSearch } from "react-icons/bs"
+import { FiExternalLink } from "react-icons/fi"
 
 interface PageProps {
    data: ApiResponse
@@ -44,8 +45,8 @@ const Home:NextPage<PageProps> = ({data}) => {
                   </h2>
                   <p className="mt-6">By <span className="text-accent font-bold">{data.artObjects[0].principalOrFirstMaker}</span></p>
                   <p className="text-accent italic">
-                     <a href="">
-                        Link to rijksmuseum
+                     <a href="" className="flex gap-2 items-center">
+                        Link to rijksmuseum <FiExternalLink className="" size={16} />
                      </a>
                   </p>
                </div>
