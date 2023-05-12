@@ -1,7 +1,6 @@
-import Image from "next/image"
 import { Inter } from "next/font/google"
 import { GetServerSideProps } from "next"
-import axios from "../axios"
+import axios from "@/utils/axios"
 
 const inter = Inter({ subsets: ["latin"] })
 
