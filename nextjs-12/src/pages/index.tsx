@@ -9,7 +9,7 @@ interface PageProps {
 }
 
 const Home:NextPage<PageProps> = ({data}) => {
-   console.log(data)
+   console.log()
    return (
       <main
          className={`flex bg-contrast py-6 px-14 min-h-screen fixed inset-0 overflow-y-auto w-screen flex-col ${poppins.className}`}
@@ -51,6 +51,15 @@ const Home:NextPage<PageProps> = ({data}) => {
                   </p>
                </div>
                <img src={data.artObjects[0].webImage.url} alt="" />
+            </div>
+            <div className="grid grid-cols-3">
+               {[...data.artObjects].splice(1).map(item => (
+                  <div
+                     key={item.id}
+                  >
+                     <img src={item.webImage.url} alt="" />
+                  </div>
+               ))}
             </div>
          </section>
       </main>
