@@ -11,7 +11,7 @@ const Home:NextPage<PageProps> = ({data}) => {
    console.log(data)
    return (
       <main
-         className={`flex bg-contrast py-6 px-14 min-h-screen w-screen flex-col justify-between ${poppins.className}`}
+         className={`flex bg-contrast py-6 px-14 min-h-screen fixed inset-0 overflow-y-auto w-screen flex-col ${poppins.className}`}
       >
          <header className="flex border-b border-primary pb-4 justify-between">
             <h1 className={`${playfair.className} font-bold text-2xl flex flex-col leading-5`}>
@@ -28,6 +28,30 @@ const Home:NextPage<PageProps> = ({data}) => {
                <BsSearch size={22}/>
             </div>
          </header>
+         <section className="py-10">
+            <div className="grid grid-cols-2">
+               <div className="transform translate-x-[10%] my-auto">
+                  <h2 className={`text-7xl ${playfair.className} flex flex-col items-start gap-2`}>
+                     <span className="border-t-2 border-primary">
+                        {data.artObjects[0].title.split(" ")[0]}
+                     </span>
+                     <span className="transform translate-x-[5%] border-y-2 border-primary">
+                        {data.artObjects[0].title.split(" ").splice(1,3).join(" ")}
+                     </span>
+                     <span className="border-b-2 border-primary">
+                        {data.artObjects[0].title.split(" ").splice(4).join(" ")}
+                     </span>
+                  </h2>
+                  <p className="mt-6">By <span className="text-accent font-bold">{data.artObjects[0].principalOrFirstMaker}</span></p>
+                  <p className="text-accent italic">
+                     <a href="">
+                        Link to rijksmuseum
+                     </a>
+                  </p>
+               </div>
+               <img src={data.artObjects[0].webImage.url} alt="" />
+            </div>
+         </section>
       </main>
    )
 }
