@@ -1,9 +1,6 @@
 import { GetServerSideProps, NextPage } from "next"
 import axios from "@/utils/axios"
-import { playfair, poppins } from "@/utils/fonts"
-import { BsSearch, BsArrowRightShort } from "react-icons/bs"
 import { Grid, Hero, Layout } from "@/components"
-import socials from "@/utils/socials"
 
 interface PageProps {
    data: ApiResponse
