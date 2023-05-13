@@ -26,7 +26,7 @@ const Home:NextPage<PageProps> = ({data}) => {
 }
 export default Home
 export const getServerSideProps:GetServerSideProps<PageProps> = async () => {
-   const res = await axios.get("")
+   const res = await axios.get(`collection?key=${process.env.RIJKS_MUSEUM_APIKEY}`)
    const data = res.data
    
    return {
