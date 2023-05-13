@@ -2,6 +2,7 @@ import { IconType } from "react-icons"
 import { AiFillInstagram, AiOutlineTwitter, AiFillYoutube } from "react-icons/ai"
 import { FaFacebookSquare, FaPinterest } from "react-icons/fa"
 import { BsSearch, BsArrowRightShort } from "react-icons/bs"
+import { IoClose } from "react-icons/io5"
 
 export const InstagramIcon: IconType = (props) => {
    return (
@@ -46,6 +47,12 @@ export const PinterestIcon: IconType = (props) => {
 export const SearchIcon: IconType = (props) => {
    return (
       <BsSearch {...props}/>
+   )
+}
+
+export const IconClose: IconType = (props) => {
+   return (
+      <IoClose {...props}/>
    )
 }
 

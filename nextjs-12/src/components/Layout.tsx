@@ -1,5 +1,5 @@
 import { playfair, poppins } from "@/utils/fonts"
-import { ArrowRightIcon, SearchIcon } from "./Icons"
+import { ArrowRightIcon, IconClose, SearchIcon } from "./Icons"
 import socials from "@/utils/socials"
 import { FC, PropsWithChildren, useState } from "react"
 
@@ -25,8 +25,17 @@ const Header = () => {
    return (
       <header className="flex border-b border-primary relative pb-4 justify-between">
          {showSearch && (
-            <div className="absolute inset-0 bg-contrast/95 flex p-2">
-               <input type="text" className="flex-1 rounded border-slate-300" />
+            <div className="absolute inset-0 bg-contrast/95 flex items-center p-2">
+               <input 
+                  type="text" 
+                  className="flex-1 rounded border-slate-300" 
+               />
+               <button 
+                  className="px-1"
+                  onClick={() => setShowSearch(false)}
+               >
+                  <IconClose className="text-slate-500" size={30} />
+               </button>
             </div>
          )}
          <h1 className={`${playfair.className} font-bold text-2xl flex flex-col leading-5`}>
