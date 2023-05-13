@@ -7,7 +7,6 @@ interface PageProps {
 }
 
 const ArtworkDetail:NextPage<PageProps> = ({ data }) => {
-   console.log(data)
    return (
       <Layout>
          <Hero 
