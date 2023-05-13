@@ -2,6 +2,7 @@ import { playfair } from "@/utils/fonts"
 import { FC } from "react"
 import { FiExternalLink } from "react-icons/fi"
 import { ImageContainer } from "./ImageContainer"
+import { useRouter } from "next/router"
 
 interface HeroProps {
    artObject: ArtObjectType
@@ -13,6 +14,7 @@ export const Hero:FC<HeroProps> = ({
    const titleSplitted = artObject.title.split(" ")
    const lowerAmount =  Math.floor(titleSplitted.length / 3) 
    const higherAmount =  Math.ceil(titleSplitted.length / 3)
+   const router = useRouter()
 
    return (
       <div className="grid grid-cols-2">
@@ -39,6 +41,7 @@ export const Hero:FC<HeroProps> = ({
             <ImageContainer 
                url={artObject.webImage.url}
                objectId={artObject.objectNumber}
+               disableLink={!!router.query.id}
             />
          </div>
       </div>
