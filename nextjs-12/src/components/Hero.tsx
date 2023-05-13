@@ -1,6 +1,7 @@
 import { playfair } from "@/utils/fonts"
 import { FC } from "react"
 import { FiExternalLink } from "react-icons/fi"
+import { ImageContainer } from "./ImageContainer"
 
 interface HeroProps {
    artObject: ArtObjectType
@@ -30,7 +31,9 @@ export const Hero:FC<HeroProps> = ({
                </a>
             </p>
          </div>
-         <img src={artObject.webImage.url} alt="" />
+         <ImageContainer 
+            url={artObject.webImage.url}
+         />
       </div>
    )
 }

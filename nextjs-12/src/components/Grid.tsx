@@ -1,5 +1,6 @@
 import { FC } from "react"
 import { FiExternalLink } from "react-icons/fi"
+import { ImageContainer } from "./ImageContainer"
 
 interface GridProps {
    artObject: ArtObjectType
@@ -14,10 +15,8 @@ export const Grid:FC<GridProps> = ({
       <div
          className={`${index % 3 === 0 ? "col-span-2 aspect-video" : ""} flex flex-col justify-between`}
       >
-         <img 
-            className="h-full w-full object-cover" 
-            src={artObject.webImage.url} 
-            alt="Artwork" 
+         <ImageContainer 
+            url={artObject.webImage.url}
          />
          <div className="mt-2 leading-4 flex justify-between items-center">
             <div className="flex flex-col">
