@@ -33,6 +33,7 @@ export const Hero:FC<HeroProps> = ({
          </div>
          <ImageContainer 
             url={artObject.webImage.url}
+            objectId={artObject.objectNumber}
          />
       </div>
    )

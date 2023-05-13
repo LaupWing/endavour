@@ -11,12 +11,14 @@ export const Grid:FC<GridProps> = ({
    index,
    artObject
 }) => {
+   
    return (
       <div
          className={`${index % 3 === 0 ? "col-span-2 aspect-video" : ""} flex flex-col justify-between`}
       >
          <ImageContainer 
             url={artObject.webImage.url}
+            objectId={artObject.objectNumber}
          />
          <div className="mt-2 leading-4 flex justify-between items-center">
             <div className="flex flex-col">
