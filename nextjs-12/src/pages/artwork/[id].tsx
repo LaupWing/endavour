@@ -42,6 +42,9 @@ const ArtworkDetail:NextPage<PageProps> = ({ data }) => {
                ))}
             </tbody>
          </table>
+         <p className="text-2xl w-1/2 mt-12">
+            {data.artObject.description}
+         </p>
       </Layout>
    )
 }
