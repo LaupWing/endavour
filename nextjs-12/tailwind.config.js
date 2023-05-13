@@ -2,7 +2,6 @@
 
 const withOpacityValue = (variable) => {
    return ({opacityValue}) => {
-      console.log(`rgb(var(${variable}))`)
       if (opacityValue === undefined) {
          return `rgb(var(${variable}))`
       } else {
