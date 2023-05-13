@@ -35,10 +35,12 @@ export const Hero:FC<HeroProps> = ({
                </a>
             </p>
          </div>
-         <ImageContainer 
-            url={artObject.webImage.url}
-            objectId={artObject.objectNumber}
-         />
+         <div className="aspect-square">
+            <ImageContainer 
+               url={artObject.webImage.url}
+               objectId={artObject.objectNumber}
+            />
+         </div>
       </div>
    )
 }
