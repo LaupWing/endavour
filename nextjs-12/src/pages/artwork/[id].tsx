@@ -1,4 +1,4 @@
-import { Hero, Layout } from "@/components"
+import { Colors, Hero, Layout } from "@/components"
 import { GetServerSideProps, NextPage } from "next"
 import axios from "@/utils/axios"
 
@@ -13,17 +13,9 @@ const ArtworkDetail:NextPage<PageProps> = ({ data }) => {
          <Hero 
             artObject={data.artObject}
          />
-         <div className="flex gap-2 items-center">
-            <h3 className="font-bold">Colors</h3>
-            {data.artObject.colors.map((color: any) => (
-               <div 
-                  className="w-8 h-8 rounded-full border-2 border-black"
-                  style={{
-                     backgroundColor: color.hex
-                  }}
-               />
-            ))}
-         </div>
+         <Colors 
+            colors={data.artObject.colors}
+         />
          <table className="table-auto0 rounded overflow-hidden shadow mt-4">
             <thead className="bg-gray-300">
                <tr>
