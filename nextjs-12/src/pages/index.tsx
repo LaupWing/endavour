@@ -3,7 +3,7 @@ import axios from "@/utils/axios"
 import { Grid, Hero, Layout } from "@/components"
 
 interface PageProps {
-   data: ApiResponse
+   data: ApiIndexResponse
 }
 
 const Home:NextPage<PageProps> = ({data}) => {

@@ -1,4 +1,4 @@
-interface ApiResponse {
+interface ApiIndexResponse {
    artObjects: ArtObjectType[]
    count: number
    countFacets: {
@@ -6,6 +6,12 @@ interface ApiResponse {
       ondisplay: number
    }
    facets: any[]
+}
+
+interface ApiDetailResponse {
+   artObject: ArtObjectType
+   elapsedMilliseconds: number
+   artObjectPage: any
 }
 
 interface ImageType {
