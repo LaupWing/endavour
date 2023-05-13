@@ -39,4 +39,5 @@ interface ArtObjectType {
    showImage: boolean
    title: string
    webImage: ImageType
+   [key: string]: any
 }
