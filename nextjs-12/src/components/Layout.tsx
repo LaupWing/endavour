@@ -41,7 +41,7 @@ const Header = () => {
 
 const Footer = () => {
    return (
-      <footer className="w-full border-t border-primary grid grid-cols-5">
+      <footer className="w-full border-t border-primary grid grid-cols-5 mt-auto">
          <div className="col-span-2 p-4 px-10 border-r border-primary flex flex-col">
             <p className="text-2xl uppercase max-w-[60%]">Signup to our news letter!</p>
             <p className="text-sm mt-2 ml-auto text-primary/40 flex items-center">
