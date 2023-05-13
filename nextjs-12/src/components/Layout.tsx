@@ -1,7 +1,7 @@
 import { playfair, poppins } from "@/utils/fonts"
 import { ArrowRightIcon, SearchIcon } from "./Icons"
 import socials from "@/utils/socials"
-import { FC, PropsWithChildren } from "react"
+import { FC, PropsWithChildren, useState } from "react"
 
 export const Layout:FC<PropsWithChildren> = ({children}) => {
    return (
@@ -20,8 +20,15 @@ export const Layout:FC<PropsWithChildren> = ({children}) => {
 }
 
 const Header = () => {
+   const [showSearch, setShowSearch] = useState(false)
+
    return (
-      <header className="flex border-b border-primary pb-4 justify-between">
+      <header className="flex border-b border-primary relative pb-4 justify-between">
+         {showSearch && (
+            <div className="absolute inset-0 bg-contrast/95 flex p-2">
+               <input type="text" className="flex-1 rounded border-slate-300" />
+            </div>
+         )}
          <h1 className={`${playfair.className} font-bold text-2xl flex flex-col leading-5`}>
             <span className="text-accent">Rijks</span>
             <span className="">Museum</span>
@@ -33,7 +40,9 @@ const Header = () => {
                   <li>Artists</li>
                </ul>
             </nav>
-            <SearchIcon size={22}/>
+            <button onClick={() => setShowSearch(true)}>
+               <SearchIcon size={22}/>
+            </button>
          </div>
       </header>
    )
