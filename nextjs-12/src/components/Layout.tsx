@@ -73,7 +73,10 @@ const Footer = () => {
                   // @ts-ignore
                   const IconComponent = socials[key]
                   return (
-                     <IconComponent size={16} />
+                     <IconComponent 
+                        size={16} 
+                        key={key}
+                     />
                   )
                })}
             </div>
