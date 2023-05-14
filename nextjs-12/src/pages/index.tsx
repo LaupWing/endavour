@@ -9,7 +9,7 @@ interface PageProps {
 const Home:NextPage<PageProps> = ({data}) => {
    return (
       <Layout>
-         <Hero
+         {/* <Hero
             artObject={data.artObjects[0]}
          />
          <div className="grid grid-cols-3 gap-10 py-10">
@@ -20,18 +20,20 @@ const Home:NextPage<PageProps> = ({data}) => {
                   key={item.id}
                />
             ))}
-         </div>
+         </div> */}
       </Layout>
    )
 }
 export default Home
 export const getServerSideProps:GetServerSideProps<PageProps> = async () => {
-   const res = await axios.get(`collection?key=${process.env.RIJKS_MUSEUM_APIKEY}`)
-   const data = res.data
+   // const res = await axios.get(`collection?key=${process.env.RIJKS_MUSEUM_APIKEY}`)
+   const res = await fetch(`www.rijksmuseum.nl/api/nl/collection?key=${process.env.RIJKS_MUSEUM_APIKEY}`)
+   console.log(res)
+   // const data = res.data
    
    return {
       props: {
-         data      
+         data: {}      
       }
    }
 }
