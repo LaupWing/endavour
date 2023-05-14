@@ -26,8 +26,8 @@ const Home:NextPage<PageProps> = ({data}) => {
 }
 export default Home
 export const getServerSideProps:GetServerSideProps<PageProps> = async () => {
-   // const res = await axios.get(`collection?key=${process.env.RIJKS_MUSEUM_APIKEY}`)
-   const res = await fetch(`www.rijksmuseum.nl/api/nl/collection?key=${process.env.RIJKS_MUSEUM_APIKEY}`)
+   const res = await axios.get(`collection?key=${process.env.RIJKS_MUSEUM_APIKEY}`)
+   // const res = await fetch(`rijksmuseum.nl/api/nl/collection?key=${process.env.RIJKS_MUSEUM_APIKEY}`)
    console.log(res)
    // const data = res.data
    
