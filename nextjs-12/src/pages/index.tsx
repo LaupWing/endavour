@@ -31,10 +31,10 @@ const Home:NextPage<PageProps> = ({data}) => {
 }
 export default Home
 export const getServerSideProps:GetServerSideProps<PageProps> = async () => {
-   // const res = await axios.get(`collection?key=${process.env.RIJKS_MUSEUM_APIKEY}`)
-   const res = await fetch(`https://645df91512e0a87ac0e43712.mockapi.io/users`)
+   const res = await axios.get(`collection?key=${process.env.RIJKS_MUSEUM_APIKEY}`)
+   // const res = await fetch(`https://645df91512e0a87ac0e43712.mockapi.io/users`)
    
-   // const data = res.data
+   const data = res.data
    
    return {
       props: {
