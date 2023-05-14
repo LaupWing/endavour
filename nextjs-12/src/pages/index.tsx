@@ -7,6 +7,11 @@ interface PageProps {
 }
 
 const Home:NextPage<PageProps> = ({data}) => {
+   const test = async () => {
+      const _data = await fetch("https://www.rijksmuseum.nl/api/nl/collection?key=DiJ44l70")
+      console.log(_data)
+   }
+   test()
    return (
       <Layout>
          {/* <Hero
@@ -26,9 +31,9 @@ const Home:NextPage<PageProps> = ({data}) => {
 }
 export default Home
 export const getServerSideProps:GetServerSideProps<PageProps> = async () => {
-   const res = await axios.get(`collection?key=${process.env.RIJKS_MUSEUM_APIKEY}`)
-   // const res = await fetch(`rijksmuseum.nl/api/nl/collection?key=${process.env.RIJKS_MUSEUM_APIKEY}`)
-   console.log(res)
+   // const res = await axios.get(`collection?key=${process.env.RIJKS_MUSEUM_APIKEY}`)
+   const res = await fetch(`https://645df91512e0a87ac0e43712.mockapi.io/users`)
+   
    // const data = res.data
    
    return {
