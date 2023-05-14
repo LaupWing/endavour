@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const instance = axios.create({
-   baseURL: `www.rijksmuseum.nl/api/nl/`,
+   baseURL: `https://www.rijksmuseum.nl/api/nl/`,
    timeout: 4000,
 })
 
