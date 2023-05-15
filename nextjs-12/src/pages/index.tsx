@@ -3,17 +3,17 @@ import axios from "@/utils/axios"
 import { Grid, Hero, Layout } from "@/components"
 
 interface PageProps {
-   data: ApiIndexResponse
+   art_works: ApiIndexResponse["artObjects"]
 }
 
-const Home:NextPage<PageProps> = ({data}) => {
+const Home:NextPage<PageProps> = ({ art_works }) => {
    return (
       <Layout>
          <Hero
-            artObject={data.artObjects[0]}
+            artObject={art_works[0]}
          />
          <div className="grid grid-cols-3 gap-10 py-10">
-            {[...data.artObjects].splice(1).map((item, i) => (
+            {[...art_works].splice(1).map((item, i) => (
                <Grid 
                   artObject={item}
                   index={i}
@@ -27,12 +27,11 @@ const Home:NextPage<PageProps> = ({data}) => {
 export default Home
 export const getServerSideProps:GetServerSideProps<PageProps> = async () => {
    const res = await axios.get(`collection?key=${process.env.RIJKS_MUSEUM_APIKEY}`)
-   
-   const data = res.data
+   const data = res.data as ApiIndexResponse
    
    return {
       props: {
-         data      
+         art_works: data.artObjects      
       }
    }
 }

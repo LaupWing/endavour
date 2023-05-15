@@ -45,7 +45,9 @@ const Header = () => {
       reset()
       router.push({
          pathname: "/search",
-         query: searchTerm
+         query: {
+            searchTerm
+         }
       })
    }
 
