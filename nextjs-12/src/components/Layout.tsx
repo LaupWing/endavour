@@ -1,5 +1,5 @@
 import { playfair, poppins } from "@/utils/fonts"
-import { ArrowRightIcon, IconClose, SearchIcon } from "./Icons"
+import { ArrowRightIcon, CloseIcon, SearchIcon } from "./Icons"
 import socials from "@/utils/socials"
 import { FC, PropsWithChildren, useState } from "react"
 
@@ -34,7 +34,7 @@ const Header = () => {
                   className="px-1"
                   onClick={() => setShowSearch(false)}
                >
-                  <IconClose className="text-slate-500" size={30} />
+                  <CloseIcon className="text-slate-500" size={30} />
                </button>
             </div>
          )}

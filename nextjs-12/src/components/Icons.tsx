@@ -50,7 +50,7 @@ export const SearchIcon: IconType = (props) => {
    )
 }
 
-export const IconClose: IconType = (props) => {
+export const CloseIcon: IconType = (props) => {
    return (
       <IoClose {...props}/>
    )
