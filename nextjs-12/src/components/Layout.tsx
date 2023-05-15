@@ -19,6 +19,10 @@ export const Layout:FC<PropsWithChildren> = ({children}) => {
    )
 }
 
+interface FormValues {
+   searchTerm: string
+}
+
 const Header = () => {
    const [showSearch, setShowSearch] = useState(false)
    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
