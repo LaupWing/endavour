@@ -11,6 +11,5 @@ app.get("/", (req: Request, res: Response) => {
 })
 
 app.listen(port, () => {
-   console.log("Server is rulling at ")
-   console.log(port)
+   console.log("Server is running at ", port)
 })
