@@ -1,7 +1,7 @@
 import { playfair, poppins } from "@/utils/fonts"
 import { ArrowRightIcon, CloseIcon, SearchIcon } from "./Icons"
 import socials from "@/utils/socials"
-import { FC, FormEvent, PropsWithChildren, useState } from "react"
+import { FC, PropsWithChildren, useState } from "react"
 import { useForm, SubmitHandler } from "react-hook-form"
 import clsx from "clsx"
 import { useRouter } from "next/router"
@@ -12,7 +12,7 @@ export const Layout:FC<PropsWithChildren> = ({children}) => {
       <main
          className={`flex bg-contrast min-h-screen fixed inset-0 overflow-y-auto w-screen flex-col ${poppins.className}`}
       >
-         <div className="px-14">
+         <div className="px-2 md:px-14">
             <Header />
             <section className="py-10">
                {children}
@@ -98,7 +98,7 @@ const Header = () => {
                <span className="">Museum</span>
             </h1>
          </Link>
-         <div className="flex items-center mr-4">
+         <div className="flex items-center mr-1 md:mr-4">
             <nav className="mr-8">
                <ul className="flex gap-4">
                   <li>Works</li>
