@@ -12,7 +12,7 @@ export const Layout:FC<PropsWithChildren> = ({children}) => {
       <main
          className={`flex bg-contrast min-h-screen fixed inset-0 overflow-y-auto w-screen flex-col ${poppins.className}`}
       >
-         <div className="px-2 md:px-14">
+         <div className="px-4 md:px-14">
             <Header />
             <section className="py-10">
                {children}

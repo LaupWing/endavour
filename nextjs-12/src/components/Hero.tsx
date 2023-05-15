@@ -17,9 +17,9 @@ export const Hero:FC<HeroProps> = ({
    const router = useRouter()
 
    return (
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-1 md:grid-cols-2">
          <div className="transform translate-x-[10%] my-auto flex flex-col items-start">
-            <h2 className={`text-7xl ${playfair.className} flex flex-col items-start gap-2`}>
+            <h2 className={`text-2xl md:text-7xl ${playfair.className} flex flex-col items-start gap-2`}>
                <span className="border-t-2 border-primary">
                   {[...titleSplitted].splice(0, lowerAmount).join(" ")}
                </span>
