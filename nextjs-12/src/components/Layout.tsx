@@ -3,6 +3,7 @@ import { ArrowRightIcon, CloseIcon, SearchIcon } from "./Icons"
 import socials from "@/utils/socials"
 import { FC, FormEvent, PropsWithChildren, useState } from "react"
 import { useForm, SubmitHandler } from "react-hook-form"
+import clsx from "clsx"
 
 export const Layout:FC<PropsWithChildren> = ({children}) => {
    return (
@@ -50,12 +51,18 @@ const Header = () => {
                className="absolute inset-0 bg-contrast/95 flex items-center p-2"
                onSubmit={handleSubmit(submitHandler)}
             >
-               <div className="flex flex-1 items-center relative">
+               <div 
+                  className={clsx(
+                     "flex flex-1 items-center relative"
+                  )}
+               >
                   <input 
                      type="text" 
                      className="flex-1 rounded border-slate-300" 
                      placeholder="What are you searching for?"
-                     {...register("searchTerm")}
+                     {...register("searchTerm", {
+                        required: "Search field cannot be empty!"
+                     })}
                   />
                   <button 
                      type="submit"
