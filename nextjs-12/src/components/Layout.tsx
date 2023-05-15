@@ -117,7 +117,7 @@ const Footer = () => {
    return (
       <footer className="w-full border-t border-primary grid grid-cols-1 md:grid-cols-5 mt-auto">
          <div className="col-span-2 p-4 px-10 md:border-r border-primary flex flex-col">
-            <p className="text-2xl uppercase max-w-[60%]">Signup to our news letter!</p>
+            <p className="md:text-2xl text-lg uppercase max-w-[80%] md:max-w-[60%]">Signup to our news letter!</p>
             <p className="text-sm mt-2 ml-auto text-primary/40 flex items-center">
                ENTER YOUR EMAIL
                <ArrowRightIcon className="ml-1 text-accent" size={22} />

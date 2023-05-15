@@ -12,7 +12,7 @@ const Home:NextPage<PageProps> = ({ art_works }) => {
          <Hero
             artObject={art_works[0]}
          />
-         <div className="grid grid-cols-3 gap-10 py-10">
+         <div className="grid grid-cols-2 md:grid-cols-3 gap-10 py-10">
             {[...art_works].splice(1).map((item, i) => (
                <Grid 
                   artObject={item}
