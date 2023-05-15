@@ -5,6 +5,7 @@ import { FC, FormEvent, PropsWithChildren, useState } from "react"
 import { useForm, SubmitHandler } from "react-hook-form"
 import clsx from "clsx"
 import { useRouter } from "next/router"
+import Link from "next/link"
 
 export const Layout:FC<PropsWithChildren> = ({children}) => {
    return (
@@ -91,10 +92,12 @@ const Header = () => {
                </button>
             </form>
          )}
-         <h1 className={`${playfair.className} font-bold text-2xl flex flex-col leading-5`}>
-            <span className="text-accent">Rijks</span>
-            <span className="">Museum</span>
-         </h1>
+         <Link href={"/"}>
+            <h1 className={`${playfair.className} font-bold text-2xl flex flex-col leading-5`}>
+               <span className="text-accent">Rijks</span>
+               <span className="">Museum</span>
+            </h1>
+         </Link>
          <div className="flex items-center mr-4">
             <nav className="mr-8">
                <ul className="flex gap-4">
