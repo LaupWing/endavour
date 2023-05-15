@@ -1,6 +1,6 @@
 <template>
    <div class="grid grid-cols-1 md:grid-cols-2 relative">
-      <div class="transform bottom-2 bg-contrast/60 backdrop-blur p-4 rounded absolute md:relative md:bg-transparent md:backdrop-blur-0 translate-x-[10%] my-auto flex flex-col items-start">
+      <div class="transform bottom-2 bg-contrast/60 backdrop-blur p-4 rounded absolute md:relative md:bg-transparent md:backdrop-blur-0 translate-x-[10%] my-auto flex flex-col items-start z-50">
          <h2 class="text-2xl md:text-5xl lg:text-7xl font-display flex flex-col items-start gap-2">
             <span class="border-t-2 border-primary">
                {{[...titleSplitted].splice(0, lowerAmount).join(" ")}}
