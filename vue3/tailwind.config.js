@@ -12,6 +12,10 @@ const withOpacityValue = (variable) => {
 module.exports = {
    content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx,vue}"],
    theme: {
+      fontFamily: {
+         sans: ["Poppins", "sans-serif"],
+         display: ["Playfair Display", "display"],
+      },
       extend: {
          colors: {
             primary: withOpacityValue("--color-primary"),

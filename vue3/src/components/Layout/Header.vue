@@ -35,7 +35,7 @@
          </button>
       </form>
       <RouterLink to="/">
-         <h1 class="font-bold text-2xl flex flex-col leading-5">
+         <h1 class="font-bold font-display text-2xl flex flex-col leading-5">
             <span class="text-accent">Rijks</span>
             <span>Museum</span>
          </h1>
