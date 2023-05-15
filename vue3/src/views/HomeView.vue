@@ -7,5 +7,8 @@
 import { useArtWorkStore } from "@/stores/artWorks"
 
 const artWorkStore = useArtWorkStore()
-artWorkStore.fetchAll()
+
+if(!artWorkStore.artWorks.length){
+   artWorkStore.fetchAll()
+}
 </script>
