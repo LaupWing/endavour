@@ -1,10 +1,10 @@
 <template>
-   <header class="w-full bg-red-400 py-4">
-   </header>
-
-   <RouterView />
+   <Layout>
+      <RouterView />
+   </Layout>
 </template>
 
 <script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router"
+import { RouterView } from "vue-router"
+import Layout from "./components/Layout/Layout.vue"
 </script>

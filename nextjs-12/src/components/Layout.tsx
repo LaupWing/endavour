@@ -59,9 +59,7 @@ const Header = () => {
                className="absolute inset-0 bg-contrast/95 flex items-center p-2"
                onSubmit={handleSubmit(submitHandler)}
             >
-               <div 
-                  className="flex flex-1 items-center relative"
-               >
+               <div className="flex flex-1 items-center relative">
                   <input 
                      type="text" 
                      className={
