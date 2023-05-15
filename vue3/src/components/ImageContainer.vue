@@ -11,6 +11,7 @@
    </div>
    <RouterLink
       v-else
+      class="w-full h-full relative overflow-hidden group"
       :to="{
          name: 'Detail',
          params: {
