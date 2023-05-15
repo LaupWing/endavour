@@ -1,7 +1,7 @@
 import { playfair, poppins } from "@/utils/fonts"
 import { ArrowRightIcon, CloseIcon, SearchIcon } from "./Icons"
 import socials from "@/utils/socials"
-import { FC, PropsWithChildren, useState } from "react"
+import { FC, FormEvent, PropsWithChildren, useState } from "react"
 
 export const Layout:FC<PropsWithChildren> = ({children}) => {
    return (
@@ -21,6 +21,9 @@ export const Layout:FC<PropsWithChildren> = ({children}) => {
 
 const Header = () => {
    const [showSearch, setShowSearch] = useState(false)
+   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+      e.preventDefault()
+   }
 
    return (
       <header className="flex border-b border-primary py-4 justify-between sticky top-0 bg-contrast z-50">
@@ -31,11 +34,11 @@ const Header = () => {
                      type="text" 
                      className="flex-1 rounded border-slate-300" 
                   />
-                  <button type="submit">
-                     <SearchIcon 
-                        size={22} 
-                        className="absolute right-4 text-gray-400" 
-                     />
+                  <button 
+                     type="submit"
+                     className="absolute right-4 text-gray-400" 
+                  >
+                     <SearchIcon size={22}/>
                   </button>
                </div>
                <button 
