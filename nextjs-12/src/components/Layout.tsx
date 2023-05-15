@@ -115,15 +115,15 @@ const Header = () => {
 
 const Footer = () => {
    return (
-      <footer className="w-full border-t border-primary grid grid-cols-5 mt-auto">
-         <div className="col-span-2 p-4 px-10 border-r border-primary flex flex-col">
+      <footer className="w-full border-t border-primary grid grid-cols-1 md:grid-cols-5 mt-auto">
+         <div className="col-span-2 p-4 px-10 md:border-r border-primary flex flex-col">
             <p className="text-2xl uppercase max-w-[60%]">Signup to our news letter!</p>
             <p className="text-sm mt-2 ml-auto text-primary/40 flex items-center">
                ENTER YOUR EMAIL
                <ArrowRightIcon className="ml-1 text-accent" size={22} />
             </p>
          </div>
-         <div className="col-span-1 grid grid-cols-2 text-sm border-r border-primary">
+         <div className="col-span-1 grid grid-cols-2 py-4 md:py-0 text-sm border-t md:border-t-0 md:border-r border-primary">
             <ul className="flex flex-col items-center justify-center">
                <div>
                   <li>About</li>
@@ -142,7 +142,7 @@ const Footer = () => {
             </ul>
          </div>
          <div className="col-span-2 grid grid-col-1 grid-rows-3">
-            <div className="border-b border-primary flex gap-4 items-center px-4">
+            <div className="border-b flex gap-4 items-center px-4  border-primary border-t md:border-t-0 py-4 md:py-0">
                {Object.keys(socials).map(key =>{
                   // @ts-ignore
                   const IconComponent = socials[key]
