@@ -19,10 +19,14 @@
       <Hero 
          :artObject="data"
       />
+      <Colors
+         :colors="data.colors"
+      />
    </div>
 </template>
 
 <script setup lang="ts">
+import Colors from "@/components/Colors.vue"
 import Grid from "@/components/Grid.vue"
 import Hero from "@/components/Hero.vue"
 import ArrowLeftIcon from "@/components/icons/ArrowLeftIcon.vue"
