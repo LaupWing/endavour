@@ -8,7 +8,7 @@ export const Layout:FC<PropsWithChildren> = ({children}) => {
       <main
          className={`flex bg-contrast min-h-screen fixed inset-0 overflow-y-auto w-screen flex-col ${poppins.className}`}
       >
-         <div className="py-6 px-14">
+         <div className="px-14">
             <Header />
             <section className="py-10">
                {children}
@@ -23,7 +23,7 @@ const Header = () => {
    const [showSearch, setShowSearch] = useState(false)
 
    return (
-      <header className="flex border-b border-primary relative pb-4 justify-between">
+      <header className="flex border-b border-primary py-4 justify-between sticky top-0 bg-contrast z-50">
          {showSearch && (
             <div className="absolute inset-0 bg-contrast/95 flex items-center p-2">
                <input 
