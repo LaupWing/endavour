@@ -25,6 +25,19 @@
             </div>
          </ul>
       </div>
+      <div class="col-span-2 grid grid-col-1 grid-rows-3">
+         <div class="border-b flex gap-4 items-center px-4  border-primary border-t md:border-t-0 py-4 md:py-0">
+            <component 
+               v-for="key in Object.keys(socials)"
+               :key="key"
+               :is="socials[key as keyof typeof socials]"
+            />
+         </div>
+         <div class="row-span-2 flex text-sm flex-col justify-center px-4">
+            <p>info@rijksmuseum.nl</p>
+            <p>+31 (0) 20 6747 000</p>
+         </div>
+      </div>
    </footer>
 </template>
 

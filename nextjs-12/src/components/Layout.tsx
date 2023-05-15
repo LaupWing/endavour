@@ -142,8 +142,7 @@ const Footer = () => {
          <div className="col-span-2 grid grid-col-1 grid-rows-3">
             <div className="border-b flex gap-4 items-center px-4  border-primary border-t md:border-t-0 py-4 md:py-0">
                {Object.keys(socials).map(key =>{
-                  // @ts-ignore
-                  const IconComponent = socials[key]
+                  const IconComponent = socials[key as keyof typeof socials]
                   return (
                      <IconComponent 
                         size={16} 
