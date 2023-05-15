@@ -20,6 +20,7 @@
          :artObject="data"
       />
       <Colors
+         className="mt-4"
          :colors="data.colors"
       />
       <table class="table-auto rounded overflow-hidden shadow mt-4">
