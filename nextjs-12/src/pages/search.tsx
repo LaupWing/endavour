@@ -24,7 +24,11 @@ const Search:NextPage<PageProps> = ({
                   className="flex"
                >
                   <div className="md:w-32 w-20 flex-shrink-0 aspect-square">
-                     <img className="h-full w-full object-cover" src={art_work.webImage.url} alt="" />
+                     <img 
+                        className="h-full w-full object-cover" 
+                        src={art_work.webImage.url} 
+                        alt="result image" 
+                     />
                   </div>
                   <div className="ml-2 py-2">
                      <h2 className="md:text-base text-sm">
