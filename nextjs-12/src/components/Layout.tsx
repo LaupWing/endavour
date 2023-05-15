@@ -25,18 +25,27 @@ const Header = () => {
    return (
       <header className="flex border-b border-primary py-4 justify-between sticky top-0 bg-contrast z-50">
          {showSearch && (
-            <div className="absolute inset-0 bg-contrast/95 flex items-center p-2">
-               <input 
-                  type="text" 
-                  className="flex-1 rounded border-slate-300" 
-               />
+            <form className="absolute inset-0 bg-contrast/95 flex items-center p-2">
+               <div className="flex flex-1 items-center relative">
+                  <input 
+                     type="text" 
+                     className="flex-1 rounded border-slate-300" 
+                  />
+                  <button type="submit">
+                     <SearchIcon 
+                        size={22} 
+                        className="absolute right-4 text-gray-400" 
+                     />
+                  </button>
+               </div>
                <button 
                   className="px-1"
                   onClick={() => setShowSearch(false)}
+                  type="button"
                >
                   <CloseIcon className="text-slate-500" size={30} />
                </button>
-            </div>
+            </form>
          )}
          <h1 className={`${playfair.className} font-bold text-2xl flex flex-col leading-5`}>
             <span className="text-accent">Rijks</span>
