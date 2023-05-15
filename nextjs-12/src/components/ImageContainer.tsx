@@ -34,7 +34,7 @@ export const ImageContainer:FC<{
             src={url} 
             alt="Artwork" 
          />
-         <div className="absolute opacity-0 duration-300 group-hover:opacity-100 inset-0 bg-contrast/70 text-accent flex items-center justify-center">
+         <div className="absolute opacity-0 duration-300 group-hover:opacity-100 inset-0 bg-contrast/40 text-accent flex items-center justify-center">
             <h3 className={clsx("text-2xl scale-150 group-hover:scale-100  duration-300", playfair.className)}>Read more</h3>
          </div>
       </Link>

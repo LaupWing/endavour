@@ -25,7 +25,9 @@ export const Grid:FC<GridProps> = ({
                <p>{artObject.title}</p>
                <p className="text-xs">By <span className="text-accent">{artObject.principalOrFirstMaker}</span></p>
             </div>
-            <FiExternalLink className="text-accent cursor-pointer" size={16} />
+            <a href={artObject.links.web} target="_blank" rel="noopener noreferrer">
+               <FiExternalLink className="text-accent cursor-pointer" size={16} />
+            </a>
          </div>
       </div>
    )
