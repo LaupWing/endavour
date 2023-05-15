@@ -2,10 +2,57 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider = "prisma-client-js"
+   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("file:./dev.db")
+   provider = "postgresql"
+   url      = env("file:./dev.db")
+}
+
+model Artwork {
+   id                    String       @id
+   objectNumber          String?
+   title                 String?
+   hasImage              Boolean?
+   principalOrFirstMaker String?
+   longTitle             String?
+   showImage             Boolean?
+   permitDownload        Boolean?
+   links                 Links?
+   webImage              WebImage?
+   headerImage           HeaderImage?
+   productionPlaces      String[]
+}
+
+model Links {
+   id        Int     @id @default(autoincrement())
+   self      String
+   web       String
+   artwork   Artwork @relation(fields: [artworkId], references: [id])
+   artworkId String  @unique
+}
+
+model WebImage {
+   id                Int     @id @default(autoincrement())
+   guid              String?
+   offsetPercentageX Float?
+   offsetPercentageY Float?
+   width             Int?
+   height            Int?
+   url               String?
+   artwork           Artwork @relation(fields: [artworkId], references: [id])
+   artworkId         String  @unique
+}
+
+model HeaderImage {
+   id                Int     @id @default(autoincrement())
+   guid              String?
+   offsetPercentageX Float?
+   offsetPercentageY Float?
+   width             Int?
+   height            Int?
+   url               String?
+   artwork           Artwork @relation(fields: [artworkId], references: [id])
+   artworkId         String  @unique
 }
