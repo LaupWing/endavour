@@ -9,6 +9,9 @@ interface PageProps {
 const ArtworkDetail:NextPage<PageProps> = ({ data }) => {
    return (
       <Layout>
+         <button className="text-accent text-sm uppercase font-bold mb-2">
+            Back
+         </button>
          <Hero 
             artObject={data.artObject}
          />
