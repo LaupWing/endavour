@@ -25,7 +25,7 @@ const ArtworkDetail:NextPage<PageProps> = ({ data }) => {
             colors={data.artObject.colors}
             className="mt-4"
          />
-         <table className="table-auto0 rounded overflow-hidden shadow mt-4">
+         <table className="table-auto rounded overflow-hidden shadow mt-4">
             <thead className="bg-gray-300">
                <tr>
                   <th className="py-2 px-8">Type</th>
