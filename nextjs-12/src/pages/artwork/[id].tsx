@@ -1,15 +1,21 @@
-import { Colors, Hero, Layout } from "@/components"
+import { ArrowLeftIcon, Colors, Hero, Layout } from "@/components"
 import { GetServerSideProps, NextPage } from "next"
 import axios from "@/utils/axios"
+import { useRouter } from "next/router"
 
 interface PageProps {
    data: ApiDetailResponse
 }
 
 const ArtworkDetail:NextPage<PageProps> = ({ data }) => {
+   const router = useRouter()
    return (
       <Layout>
-         <button className="text-accent text-sm uppercase font-bold mb-2">
+         <button 
+            className="text-accent text-sm uppercase font-bold mb-2 flex items-center"
+            onClick={() => router.back()}
+         >
+            <ArrowLeftIcon size={26} />
             Back
          </button>
          <Hero 
