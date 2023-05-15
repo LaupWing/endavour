@@ -2,6 +2,7 @@ import { playfair, poppins } from "@/utils/fonts"
 import { ArrowRightIcon, CloseIcon, SearchIcon } from "./Icons"
 import socials from "@/utils/socials"
 import { FC, FormEvent, PropsWithChildren, useState } from "react"
+import { useForm } from "react-hook-form"
 
 export const Layout:FC<PropsWithChildren> = ({children}) => {
    return (
@@ -25,7 +26,19 @@ interface FormValues {
 
 const Header = () => {
    const [showSearch, setShowSearch] = useState(false)
-   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+   const {
+      register,
+      reset,
+      formState: {
+         errors
+      },
+      handleSubmit
+   } = useForm<FormValues>({
+      defaultValues: {
+         searchTerm: ""
+      }
+   })
+   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault()
    }
 
