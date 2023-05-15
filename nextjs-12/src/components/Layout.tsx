@@ -2,7 +2,7 @@ import { playfair, poppins } from "@/utils/fonts"
 import { ArrowRightIcon, CloseIcon, SearchIcon } from "./Icons"
 import socials from "@/utils/socials"
 import { FC, FormEvent, PropsWithChildren, useState } from "react"
-import { useForm } from "react-hook-form"
+import { useForm, SubmitHandler } from "react-hook-form"
 
 export const Layout:FC<PropsWithChildren> = ({children}) => {
    return (
@@ -38,19 +38,24 @@ const Header = () => {
          searchTerm: ""
       }
    })
-   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
-      e.preventDefault()
+   const submitHandler: SubmitHandler<FormValues> = ({ searchTerm }) => {
+      reset()
+      console.log(searchTerm)
    }
 
    return (
       <header className="flex border-b border-primary py-4 justify-between sticky top-0 bg-contrast z-50">
          {showSearch && (
-            <form className="absolute inset-0 bg-contrast/95 flex items-center p-2">
+            <form 
+               className="absolute inset-0 bg-contrast/95 flex items-center p-2"
+               onSubmit={handleSubmit(submitHandler)}
+            >
                <div className="flex flex-1 items-center relative">
                   <input 
                      type="text" 
                      className="flex-1 rounded border-slate-300" 
                      placeholder="What are you searching for?"
+                     {...register("searchTerm")}
                   />
                   <button 
                      type="submit"
