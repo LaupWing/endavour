@@ -3,6 +3,7 @@ import { GetServerSideProps, NextPage } from "next"
 import { useRouter } from "next/router"
 import axios from "../utils/axios"
 import Highlighter from "react-highlight-words"
+import Link from "next/link"
 
 interface PageProps {
    art_works: ApiIndexResponse["artObjects"]
@@ -19,7 +20,8 @@ const Search:NextPage<PageProps> = ({
          <div className="flex flex-col gap-4">
             <h2 className="text-xl">Total {art_works.length} results found on search term: {searchTerm}</h2>
             {art_works.map(art_work => (
-               <div
+               <Link
+                  href={`/artwork/${art_work.objectNumber}`}
                   key={art_work.id}
                   className="flex"
                >
@@ -47,7 +49,7 @@ const Search:NextPage<PageProps> = ({
                         </span>
                      </p>
                   </div>
-               </div>
+               </Link>
             ))}
          </div>
       </Layout>
