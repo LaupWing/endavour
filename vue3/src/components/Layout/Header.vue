@@ -3,6 +3,7 @@
       <form 
          class="absolute inset-0 bg-contrast/95 flex items-center p-2"
          v-if="showSearch"
+         @submit.prevent="handleSubmit"
       >
          <div className="flex flex-1 items-center relative">
             <input 
@@ -58,10 +59,26 @@
 import { ref } from "vue"
 import clsx from "clsx"
 import SearchIcon from "../icons/SearchIcon.vue"
-import { RouterLink } from "vue-router"
-import CloseIcon from "../icons/CloseIcon.vue";
+import { RouterLink, useRouter } from "vue-router"
+import CloseIcon from "../icons/CloseIcon.vue"
 
 const showSearch = ref<boolean>(false)
 const showError = ref<boolean>(false)
 const searchInput = ref<string>("")
+const router = useRouter()
+
+const handleSubmit = () => {
+   showError.value = false
+   if(searchInput.value === ""){
+      showError.value = true
+   } else {
+      showSearch.value = false
+      router.push({
+         name: "Search",
+         query: {
+            searchTerm: searchInput.value
+         }
+      })
+   }
+}
 </script>
