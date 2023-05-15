@@ -23,17 +23,17 @@ const Search:NextPage<PageProps> = ({
                   key={art_work.id}
                   className="flex"
                >
-                  <div className="w-32 aspect-square">
+                  <div className="md:w-32 w-20 flex-shrink-0 aspect-square">
                      <img className="h-full w-full object-cover" src={art_work.webImage.url} alt="" />
                   </div>
                   <div className="ml-2 py-2">
-                     <h2>
+                     <h2 className="md:text-base text-sm">
                         <Highlighter 
                            searchWords={(searchTerm! as string).split(" ")}
                            textToHighlight={art_work.title}
                         />
                      </h2>
-                     <p className="text-sm">
+                     <p className="md:text-sm text-xs">
                         By 
                         <span>
                            <Highlighter 
