@@ -44,7 +44,7 @@ const Header = () => {
    const submitHandler: SubmitHandler<FormValues> = ({ searchTerm }) => {
       reset()
       router.push({
-         href: "/search",
+         pathname: "/search",
          query: searchTerm
       })
    }
