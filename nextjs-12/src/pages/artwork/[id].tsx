@@ -23,6 +23,7 @@ const ArtworkDetail:NextPage<PageProps> = ({ data }) => {
          />
          <Colors 
             colors={data.artObject.colors}
+            className="mt-4"
          />
          <table className="table-auto0 rounded overflow-hidden shadow mt-4">
             <thead className="bg-gray-300">
@@ -42,7 +43,7 @@ const ArtworkDetail:NextPage<PageProps> = ({ data }) => {
                ))}
             </tbody>
          </table>
-         <p className="text-2xl w-1/2 mt-12">
+         <p className="text-2xl md:w-1/2 mt-12">
             {data.artObject.description}
          </p>
       </Layout>
