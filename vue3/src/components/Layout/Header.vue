@@ -2,7 +2,7 @@
    <header class="flex border-b border-primary py-4 justify-between sticky top-0 bg-contrast z-50">
       <form 
          class="absolute inset-0 bg-contrast/95 flex items-center p-2"
-         v-if="showError"
+         v-if="showSearch"
       >
          <div className="flex flex-1 items-center relative">
             <input 
@@ -47,7 +47,7 @@
                <li>Artists</li>
             </ul>
          </nav>
-         <button @click="showSearch = false">
+         <button @click="showSearch = true">
             <SearchIcon />
          </button>
       </div>
@@ -59,6 +59,7 @@ import { ref } from "vue"
 import clsx from "clsx"
 import SearchIcon from "../icons/SearchIcon.vue"
 import { RouterLink } from "vue-router"
+import CloseIcon from "../icons/CloseIcon.vue";
 
 const showSearch = ref<boolean>(false)
 const showError = ref<boolean>(false)
