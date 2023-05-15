@@ -33,6 +33,7 @@ const Header = () => {
                   <input 
                      type="text" 
                      className="flex-1 rounded border-slate-300" 
+                     placeholder="What are you searching for?"
                   />
                   <button 
                      type="submit"
