@@ -4,6 +4,7 @@ import socials from "@/utils/socials"
 import { FC, FormEvent, PropsWithChildren, useState } from "react"
 import { useForm, SubmitHandler } from "react-hook-form"
 import clsx from "clsx"
+import { useRouter } from "next/router"
 
 export const Layout:FC<PropsWithChildren> = ({children}) => {
    return (
@@ -27,6 +28,7 @@ interface FormValues {
 
 const Header = () => {
    const [showSearch, setShowSearch] = useState(false)
+   const router = useRouter()
    const {
       register,
       reset,
@@ -41,7 +43,10 @@ const Header = () => {
    })
    const submitHandler: SubmitHandler<FormValues> = ({ searchTerm }) => {
       reset()
-      console.log(searchTerm)
+      router.push({
+         href: "/search",
+         query: searchTerm
+      })
    }
 
    return (
@@ -52,18 +57,22 @@ const Header = () => {
                onSubmit={handleSubmit(submitHandler)}
             >
                <div 
-                  className={clsx(
-                     "flex flex-1 items-center relative"
-                  )}
+                  className="flex flex-1 items-center relative"
                >
                   <input 
                      type="text" 
-                     className="flex-1 rounded border-slate-300" 
+                     className={
+                        clsx(
+                           "flex-1 rounded",
+                           errors.searchTerm ? "border-red-400" : "border-slate-300"
+                        )
+                     } 
                      placeholder="What are you searching for?"
                      {...register("searchTerm", {
                         required: "Search field cannot be empty!"
                      })}
                   />
+                  {errors.searchTerm && <span className="absolute px-2 pt-[2px] bottom-0 translate-y-full bg-red-500 left-1 rounded-b text-contrast text-[8px] uppercase">{errors.searchTerm.message}</span>}
                   <button 
                      type="submit"
                      className="absolute right-4 text-gray-400" 
