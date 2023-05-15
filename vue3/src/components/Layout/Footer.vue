@@ -30,6 +30,17 @@
 
 <script setup lang="ts">
 import ArrowRightIcon from "../icons/ArrowRightIcon.vue"
+import FacebookIcon from "../icons/FacebookIcon.vue"
+import InstagramIcon from "../icons/InstagramIcon.vue"
+import PinterestIcon from "../icons/PinterestIcon.vue"
+import TwitterIcon from "../icons/TwitterIcon.vue"
+import YoutubeIcon from "../icons/YoutubeIcon.vue"
 
-
+const socials = {
+   facebook: FacebookIcon,
+   instagram: InstagramIcon,
+   twitter: TwitterIcon,
+   youtube: YoutubeIcon,
+   pinterest: PinterestIcon
+}
 </script>
