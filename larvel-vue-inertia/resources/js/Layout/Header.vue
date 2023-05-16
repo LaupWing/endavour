@@ -8,9 +8,7 @@
          <div className="flex flex-1 items-center relative">
             <input 
                type="text"
-               :class="clsx(
-                  'flex-1 rounded'
-               )"
+               class="flex-1 rounded"
                v-model="searchInput"
                placeholder="What are you searching for?"
             >
@@ -35,12 +33,12 @@
             <CloseIcon className="text-slate-500" />
          </button>
       </form>
-      <RouterLink to="/">
+      <Link href="/">
          <h1 class="font-bold font-display text-2xl flex flex-col leading-5">
             <span class="text-accent">Rijks</span>
             <span>Museum</span>
          </h1>
-      </RouterLink>
+      </Link>
       <div className="flex items-center mr-1 md:mr-4">
          <nav className="mr-8">
             <ul className="flex gap-4">
@@ -55,30 +53,30 @@
    </header>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue"
-import clsx from "clsx"
 import SearchIcon from "../icons/SearchIcon.vue"
-import { RouterLink, useRouter } from "vue-router"
+import { Link } from "@inertiajs/vue3"
+// import { RouterLink, useRouter } from "vue-router"
 import CloseIcon from "../icons/CloseIcon.vue"
 
 const showSearch = ref<boolean>(false)
 const showError = ref<boolean>(false)
 const searchInput = ref<string>("")
-const router = useRouter()
+// const router = useRouter()
 
 const handleSubmit = () => {
-   showError.value = false
-   if(searchInput.value === ""){
-      showError.value = true
-   } else {
-      showSearch.value = false
-      router.push({
-         name: "Search",
-         query: {
-            searchTerm: searchInput.value
-         }
-      })
-   }
+   // showError.value = false
+   // if(searchInput.value === ""){
+   //    showError.value = true
+   // } else {
+   //    showSearch.value = false
+   //    router.push({
+   //       name: "Search",
+   //       query: {
+   //          searchTerm: searchInput.value
+   //       }
+   //    })
+   // }
 }
 </script>

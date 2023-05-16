@@ -1,4 +1,16 @@
 /** @type {import('tailwindcss').Config} */
+
+const withOpacityValue = (variable) => {
+   return ({opacityValue}) => {
+      if (opacityValue === undefined) {
+         return `rgb(var(${variable}))`
+      } else {
+         return `rgb(var(${variable}) / ${opacityValue})`
+      }
+   }
+}
+
+
 export default {
    content: [
       "./storage/framework/views/*.php",
@@ -6,7 +18,19 @@ export default {
       "./resources/js/**/*vue",
    ],
    theme: {
-      extend: {},
+      fontFamily: {
+         sans: ["Poppins", "sans-serif"],
+         display: ["Playfair Display", "display"],
+      },
+      extend: {
+         colors: {
+            primary: withOpacityValue("--color-primary"),
+            contrast: withOpacityValue("--color-contrast"),
+            accent: withOpacityValue("--color-accent")
+         }
+      },
    },
-   plugins: [],
+   plugins: [
+      require("@tailwindcss/forms")
+   ],
 };
