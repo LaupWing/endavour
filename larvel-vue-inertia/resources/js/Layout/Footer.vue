@@ -41,7 +41,7 @@
    </footer>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import ArrowRightIcon from "../icons/ArrowRightIcon.vue"
 import FacebookIcon from "../icons/FacebookIcon.vue"
 import InstagramIcon from "../icons/InstagramIcon.vue"
