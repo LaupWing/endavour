@@ -1,7 +1,5 @@
-import { ArrowLeftIcon, Hero } from "@/components"
-import { GetServerSideProps, NextPage } from "next"
+import { ArrowLeftIcon, Colors, Hero } from "@/components"
 import axios from "@/utils/axios"
-import { useRouter } from "next/router"
 import Link from "next/link"
 
 const fetchDetail = async (id: string) => {
@@ -10,7 +8,6 @@ const fetchDetail = async (id: string) => {
    
    return data 
 }
-
 
 export default async function ArtworkDetail({
    params
@@ -32,10 +29,10 @@ export default async function ArtworkDetail({
          <Hero 
             artObject={data.artObject}
          />
-         {/* <Colors 
+         <Colors
             colors={data.artObject.colors}
             className="mt-4"
-         /> */}
+         />
          <table className="table-auto rounded overflow-hidden shadow mt-4">
             <thead className="bg-gray-300">
                <tr>
