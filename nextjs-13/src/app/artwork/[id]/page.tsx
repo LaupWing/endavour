@@ -2,6 +2,7 @@ import { ArrowLeftIcon, Hero } from "@/components"
 import { GetServerSideProps, NextPage } from "next"
 import axios from "@/utils/axios"
 import { useRouter } from "next/router"
+import Link from "next/link"
 
 const fetchDetail = async (id: string) => {
    const res = await axios.get(`collection/${id}?key=${process.env.RIJKS_MUSEUM_APIKEY}`)
@@ -20,7 +21,14 @@ export default async function ArtworkDetail({
 
    return (
       <>
-         {/* <BackButton />  */}
+         <Link href={"/"}>
+            <button 
+               className="text-accent text-sm uppercase font-bold mb-2 flex items-center"
+            >
+               <ArrowLeftIcon size={26} />
+               Back
+            </button>
+         </Link>
          <Hero 
             artObject={data.artObject}
          />
@@ -50,22 +58,5 @@ export default async function ArtworkDetail({
             {data.artObject.description}
          </p>
       </>
-   )
-}
-
-const BackButton = () => {
-   "use client"
-
-   const back = () => {
-
-   }
-   return (
-      <button 
-         className="text-accent text-sm uppercase font-bold mb-2 flex items-center"
-         onClick={back}
-      >
-         <ArrowLeftIcon size={26} />
-         Back
-      </button>
    )
 }
