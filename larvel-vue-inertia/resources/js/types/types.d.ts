@@ -1,39 +1,43 @@
-interface BaseType {
-   created_at: Date
-   updated_at: Date
+interface ApiIndexResponse {
+   artObjects: ArtObjectType[]
+   count: number
+   countFacets: {
+      hasimage: number,
+      ondisplay: number
+   }
+   facets: any[]
 }
 
-export interface ShopType extends BaseType {
-   name: string
-   description: string
-   id: number
-   profile_url: string
-   ratings: RatingType[]
-   average_rating: number
-   ratings_count: number
-   products?: ProductType[]
-   products_count: number
+interface ApiDetailResponse {
+   artObject: ArtObjectType
+   elapsedMilliseconds: number
+   artObjectPage: any
 }
 
-export interface RatingType extends BaseType {
-   id: number
-   shop_id: number
-   user_id: number
-   rating: number
-}
-
-export interface ProductType extends BaseType {
-   id: number
-   name: string
-   price: number
-   shop_id: number
-   description: string
-   images?: ImageType[]
-}
-
-export interface ImageType extends BaseType {
-   id: number
+interface ImageType {
+   guid: string
+   height: number
+   offsetPercentageX: number
+   offsetPercentageY: number
    url: string
-   product_id: number
-   order: number
+   width: number
+}
+
+interface ArtObjectType {
+   hasImage: boolean
+   headerImage: ImageType
+   id: string
+   links: {
+      self: string
+      web: string
+   }
+   longTitle: string
+   objectNumber: string
+   principalOrFirstMaker: string
+   permitDownload: boolean
+   productionPlaces: string[]
+   showImage: boolean
+   title: string
+   webImage: ImageType
+   [key: string]: any
 }

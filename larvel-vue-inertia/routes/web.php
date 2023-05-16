@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get("/", [IndexController::class, "index"])->name("index");
-Route::get("/hello", [IndexController::class, "show"])->name("index.show");
+Route::get("/artwork/{id}", [IndexController::class, "show"])->name("index.show");
