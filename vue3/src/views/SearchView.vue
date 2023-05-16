@@ -1,5 +1,14 @@
 <template>
-   <div className="flex flex-col gap-4">
+   <div 
+      class="flex-1 flex justify-center items-center h-full uppercase text-accent animate-pulse font-bold tracking-wider text-sm"
+      v-if="!artWorks && !loaded"
+   >
+      Loading
+   </div>
+   <div 
+      className="flex flex-col gap-4"
+      v-if="artWorks && loaded"
+   >
       <h2 className="text-xl">Total {{artWorks.length}} results found on search term: {{searchTerm}}</h2>
       <RouterLink
          v-for="artWork in artWorks"
@@ -38,25 +47,23 @@
 <script setup lang="ts">
 import { RouterLink, useRoute } from "vue-router"
 import Highlighter from "vue-highlight-words"
-import { useArtWorkStore } from "@/stores/artWorks";
-import { ref } from "vue";
+import { useArtWorkStore } from "@/stores/artWorks"
+import { ref } from "vue"
 
-export interface Props {
-   artWorks: ApiIndexResponse["artObjects"]
-}
 const route = useRoute()
 const { searchTerm } = route.query
-const data = ref<ApiIndexResponse["artObjects"]>([])
+const artWorks = ref<ApiIndexResponse["artObjects"]>([])
 const loaded = ref<boolean>(false)
 
 const artWorkStore = useArtWorkStore()
 const init = async () => {
-   data.value = await artWorkStore.fetchQuery()
+   artWorks.value = await artWorkStore.fetchQuery()
+   console.log(artWorks.value)
+   loaded.value = true
 }
 
 if(!loaded.value){
    init()
 }
 
-defineProps<Props>()
 </script>
