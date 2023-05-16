@@ -9,7 +9,7 @@
             <input 
                type="text"
                class="flex-1 rounded"
-               v-model="searchInput"
+               v-model="searchForm.searchTerm"
                placeholder="What are you searching for?"
             >
             <span 
@@ -57,26 +57,23 @@
 import { ref } from "vue"
 import SearchIcon from "../icons/SearchIcon.vue"
 import { Link } from "@inertiajs/vue3"
-// import { RouterLink, useRouter } from "vue-router"
 import CloseIcon from "../icons/CloseIcon.vue"
+import { useForm } from "@inertiajs/vue3"
 
 const showSearch = ref<boolean>(false)
 const showError = ref<boolean>(false)
-const searchInput = ref<string>("")
+const searchForm = useForm({
+   searchTerm: ""
+})
 // const router = useRouter()
 
 const handleSubmit = () => {
-   // showError.value = false
-   // if(searchInput.value === ""){
-   //    showError.value = true
-   // } else {
-   //    showSearch.value = false
-   //    router.push({
-   //       name: "Search",
-   //       query: {
-   //          searchTerm: searchInput.value
-   //       }
-   //    })
-   // }
+   showError.value = false
+   if(searchForm.searchTerm === ""){
+      showError.value = true
+   } else {
+      searchForm.searchTerm = ""
+      showSearch.value = false
+   }
 }
 </script>
