@@ -9,6 +9,10 @@ class ProductionPlace extends Model
 {
    use HasFactory;
 
+   protected $fillable = [
+      "name"
+   ];
+
    public function artworks()
    {
       return $this->belongsToMany(Artwork::class);
