@@ -1,27 +1,16 @@
 <template>
    <div>
-      <Link
-         href="/"
-      >
-         Home
-      </Link>
-      <Link
-         :href="route('index.show')"
-      >
-         About
-      </Link>
-      Index hello
+      <Hero
+         :art-object="data[0]"
+      />
    </div>
 </template>
 
 <script setup lang="ts">
 import { Link } from "@inertiajs/vue3"
+import Hero from "@/Components/Hero.vue"
 
-const props = defineProps<{
-   data: ApiIndexResponse
+defineProps<{
+   data: ApiIndexResponse["artObjects"]
 }>()
-
-console.log(!!Object.keys(route().params).length)
-console.log(Object.keys(route().params))
-
 </script>

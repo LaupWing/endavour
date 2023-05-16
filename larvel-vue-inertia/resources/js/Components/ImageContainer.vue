@@ -12,7 +12,7 @@
    <Link
       v-else
       class="w-full h-full relative overflow-hidden group"
-      :href="route('index.show')"
+      :href="route('index.show', objectId)"
    >
       <img 
          class="h-full w-full object-cover" 

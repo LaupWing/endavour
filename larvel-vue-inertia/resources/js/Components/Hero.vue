@@ -20,11 +20,11 @@
          </p>
       </div>
       <div class="aspect-square">
-         <!-- <ImageContainer
+         <ImageContainer
             :url="artObject.webImage.url"
             :objectId="artObject.objectNumber"
-            :disableLink="!!route.params.id"
-         /> -->
+            :disableLink="!!Object.keys(route().params).length"
+         />
       </div>
    </div>
 </template>
