@@ -7,5 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class WebImage extends Model
 {
-    use HasFactory;
+   use HasFactory;
+
+   protected $fillable = [
+      "offsetPercentageX",
+      "offsetPercentageU",
+      "width",
+      "height",
+      "url"
+   ];
+
+   public function artwork()
+   {
+      return $this->belongsTo(Artwork::class);
+   }
 }
