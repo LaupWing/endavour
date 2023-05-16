@@ -11,7 +11,7 @@ class IndexController extends Controller
    public function index() {
       $apiKey = env('RIJKS_MUSEUM_APIKEY');
       $url = "https://www.rijksmuseum.nl/api/nl/collection?key={$apiKey}";
-
+      
       $response = Http::get($url);
       $data = $response->json();
       
@@ -20,8 +20,15 @@ class IndexController extends Controller
       ]);
    }
    public function show($id) {
-      dd($id);
-      return inertia("Index/Show");
+      $apiKey = env('RIJKS_MUSEUM_APIKEY');
+      $url = "https://www.rijksmuseum.nl/api/nl/collection/{$id}?key={$apiKey}";
+
+      $response = Http::get($url);
+      $data = $response->json();
+
+      return inertia("Index/Show", [
+         "data" => $data["artObject"]
+      ]);
    }
    public function search(Request $request) {
       $searchTerm = $request["searchTerm"];
