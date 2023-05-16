@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
    return (
       <html lang="en">
-         <body className={`flex bg-contrast min-h-screen fixed inset-0 overflow-y-auto w-screen flex-col ${poppins.className}`}>
+         <body className={`flex bg-contrast min-h-screen overflow-y-auto flex-col ${poppins.className}`}>
             <div className="px-4 md:px-14">
                <Header />
                <main className="py-10">
@@ -58,7 +58,7 @@ const Header = () => {
       reset()
       const params = new URLSearchParams()
       params.set("searchTerm", searchTerm)
-      // router.push(`/search?${params.toString()}`)
+      router.push(`/search?${params.toString()}`)
    }
 
    return (
