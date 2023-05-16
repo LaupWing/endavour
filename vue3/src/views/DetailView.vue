@@ -49,7 +49,6 @@
 
 <script setup lang="ts">
 import Colors from "@/components/Colors.vue"
-import Grid from "@/components/Grid.vue"
 import Hero from "@/components/Hero.vue"
 import ArrowLeftIcon from "@/components/icons/ArrowLeftIcon.vue"
 import { useArtWorkStore } from "@/stores/artWorks"
