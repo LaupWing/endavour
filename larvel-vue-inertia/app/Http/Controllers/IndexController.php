@@ -14,8 +14,9 @@ class IndexController extends Controller
 
       $response = Http::get($url);
       $data = $response->json();
+      
       return inertia("Index/Index", [
-         "data" => $data->artObjects
+         "data" => $data["artObjects"]
       ]);
    }
    public function show() {
