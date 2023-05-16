@@ -1,7 +1,7 @@
 <template>
    <button 
       class="text-accent text-sm uppercase font-bold mb-2 flex items-center"
-      @click="()=>{}"
+      @click="back"
    >
       <ArrowLeftIcon class="w-5" />
       Back
@@ -42,9 +42,14 @@
 
 <script setup lang="ts">
 import Hero from "@/Components/Hero.vue"
+import Colors from "@/Components/Colors.vue"
 import ArrowLeftIcon from "@/icons/ArrowLeftIcon.vue"
 
 defineProps<{
    data: ArtObjectType
 }>()
+
+const back = () => {
+   window.history.back()
+}
 </script>
