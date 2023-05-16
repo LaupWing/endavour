@@ -21,9 +21,7 @@ export const useArtWorkStore = defineStore("art_works", () => {
       return data.artObject
    }
 
-   const fetchQuery = async () => {
-      const route = useRoute()
-      const { searchTerm } = route.query
+   const fetchQuery = async (searchTerm: string) => {
       const res = await fetch(`${baseUrl}collection?key=${apiKey}&q=${searchTerm}`)
       const data = await res.json() as ApiIndexResponse
 

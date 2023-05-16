@@ -18,9 +18,14 @@
       >
          <div className="md:w-32 w-20 flex-shrink-0 aspect-square">
             <img 
+               v-if="artWork.webImage"
                className="h-full w-full object-cover" 
                :src="artWork.webImage.url" 
                alt="result image" 
+            />
+            <div
+               v-else
+               className="h-full w-full object-cover bg-accent/10"
             />
          </div>
          <div className="ml-2 py-2">
@@ -49,18 +54,28 @@ import { RouterLink, useRoute } from "vue-router"
 import Highlighter from "vue-highlight-words"
 import { useArtWorkStore } from "@/stores/artWorks"
 import { ref } from "vue"
+import { watch } from "vue";
+import { computed } from "vue";
 
 const route = useRoute()
-const { searchTerm } = route.query
+const searchTerm = computed(() => route.query.searchTerm)
 const artWorks = ref<ApiIndexResponse["artObjects"]>([])
 const loaded = ref<boolean>(false)
 
 const artWorkStore = useArtWorkStore()
 const init = async () => {
-   artWorks.value = await artWorkStore.fetchQuery()
-   console.log(artWorks.value)
+   artWorks.value = await artWorkStore.fetchQuery(searchTerm.value as string)
    loaded.value = true
 }
+
+watch(
+   searchTerm, 
+   async ()=> {
+      loaded.value = false
+      artWorks.value = await artWorkStore.fetchQuery(searchTerm.value as string)
+      loaded.value = true
+      
+})
 
 if(!loaded.value){
    init()
