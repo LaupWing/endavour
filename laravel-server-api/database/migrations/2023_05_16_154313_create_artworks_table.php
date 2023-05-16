@@ -18,6 +18,8 @@ return new class extends Migration
          $table->string("principalOrFirstMaker");
          $table->text("longTitle");
          $table->boolean("permitDownload");
+         $table->boolean("showImage");
+         $table->boolean("hasImage");
          $table->timestamps();
       });
    }
