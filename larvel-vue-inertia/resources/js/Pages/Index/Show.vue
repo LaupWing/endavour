@@ -42,6 +42,7 @@
 
 <script setup lang="ts">
 import Hero from "@/Components/Hero.vue"
+import ArrowLeftIcon from "@/icons/ArrowLeftIcon.vue"
 
 defineProps<{
    data: ArtObjectType
