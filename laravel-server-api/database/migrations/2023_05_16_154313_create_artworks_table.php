@@ -18,10 +18,6 @@ return new class extends Migration
          $table->string("principalOrFirstMaker");
          $table->text("longTitle");
          $table->boolean("permitDownload");
-         $table->foreignIdFor(
-            \App\Models\ProductionPlace::class,
-            "production_place_id"
-         )->nullable()->constrained("production_places")->onDelete("cascade");
          $table->timestamps();
       });
    }
