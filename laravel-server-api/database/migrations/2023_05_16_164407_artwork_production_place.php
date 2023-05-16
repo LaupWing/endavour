@@ -13,17 +13,14 @@ return new class extends Migration
    {
       Schema::create("artwork_production_place", function (Blueprint $table) {
          $table->id();
-         $table->string("guid")->unique();
-         $table->timestamps();
          $table->foreignIdFor(
             \App\Models\Artwork::class,
             "artwork_id"
          )->constrained("artworks")->onDelete("cascade");
-         $table->integer("offsetPercentageX")->default(0);
-         $table->integer("offsetPercentageY")->default(0);
-         $table->integer("width");
-         $table->integer("height");
-         $table->string("url");
+         $table->foreignIdFor(
+            \App\Models\ProductionPlace::class,
+            "production_place_id"
+         )->constrained("production_places")->onDelete("cascade");
       });
    }
 
