@@ -24,7 +24,13 @@ class IndexController extends Controller
    }
    public function search(Request $request) {
       $searchTerm = $request["searchTerm"];
-      dd($searchTerm);
-      return inertia("Index/Search");
+      $apiKey = env('RIJKS_MUSEUM_APIKEY');
+      $url = "https://www.rijksmuseum.nl/api/nl/collection?key={$apiKey}&q={$searchTerm}";
+      $response = Http::get($url);
+      $data = $response->json();
+
+      return inertia("Index/Search", [
+         "data" => $data["artObjects"]
+      ]);
    }
 }
