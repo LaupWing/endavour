@@ -22,7 +22,9 @@ class IndexController extends Controller
    public function show() {
       return inertia("Index/Show");
    }
-   public function search() {
+   public function search(Request $request) {
+      $searchTerm = $request["searchTerm"];
+      dd($searchTerm);
       return inertia("Index/Search");
    }
 }
