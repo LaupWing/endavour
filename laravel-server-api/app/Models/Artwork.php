@@ -15,4 +15,9 @@ class Artwork extends Model
       "longTitle",
       "permitDownload"
    ];
+
+   public function productionPlaces()
+   {
+      return $this->belongsToMany(ProductionPlace::class);
+   }
 }

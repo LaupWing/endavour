@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProductionPlace extends Model
 {
-    use HasFactory;
+   use HasFactory;
+
+   public function artworks()
+   {
+      return $this->belongsToMany(Artwork::class);
+   }
 }
