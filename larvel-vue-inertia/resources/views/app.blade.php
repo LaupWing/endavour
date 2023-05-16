@@ -6,7 +6,8 @@
       <title>Inertia Version</title>
       <link rel="preconnect" href="https://fonts.bunny.net">
       <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-      @vite("resources/js/app.js")
+      @routes
+      @vite("resources/js/app.ts")
       @inertiaHead
    </head>
    <body>
