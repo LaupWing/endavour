@@ -1,13 +1,15 @@
 "use client"
 import { playfair, poppins } from "@/utils/fonts"
 import "./globals.css"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useForm, SubmitHandler } from "react-hook-form"
 import Link from "next/link"
 import { ArrowRightIcon, CloseIcon, SearchIcon } from "@/components"
-import { useRouter } from "next/navigation"
+import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import clsx from "clsx"
 import socials from "@/utils/socials"
+import "nprogress/nprogress.css"
+import NProgress from "nprogress"
 
 export const metadata = {
    title: "Endeavour: assignment nextjs 13",
@@ -19,6 +21,16 @@ export default function RootLayout({
 }: {
    children: React.ReactNode
 }) {
+   const pathname = usePathname()
+   const searchParams = useSearchParams()
+
+   useEffect(() => {
+      NProgress.start()
+  }, [pathname ]);
+
+  useEffect(() => {
+      NProgress.done()
+  }, [ searchParams])
    return (
       <html lang="en">
          <body className={`flex bg-contrast min-h-screen overflow-y-auto flex-col ${poppins.className}`}>
@@ -42,6 +54,7 @@ interface FormValues {
 const Header = () => {
    const [showSearch, setShowSearch] = useState(false)
    const router = useRouter()
+
    const {
       register,
       reset,
