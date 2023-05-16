@@ -32,13 +32,13 @@
             </tr>
          </thead>
          <tbody>
-               <tr
-                  v-for="size of data.dimensions"
-               >
-                  <td class="px-2 py-1">{{size.type}}</td>
-                  <td class="px-2 py-1">{{size.value}}</td>
-                  <td class="px-2 py-1">{{size.unit}}</td>
-               </tr>
+            <tr
+               v-for="size of data.dimensions"
+            >
+               <td class="px-2 py-1">{{size.type}}</td>
+               <td class="px-2 py-1">{{size.value}}</td>
+               <td class="px-2 py-1">{{size.unit}}</td>
+            </tr>
          </tbody>
       </table>
       <p class="md:text-2xl text-xl md:w-1/2 mt-12">

@@ -19,7 +19,8 @@ class IndexController extends Controller
          "data" => $data["artObjects"]
       ]);
    }
-   public function show() {
+   public function show($id) {
+      dd($id);
       return inertia("Index/Show");
    }
    public function search(Request $request) {
