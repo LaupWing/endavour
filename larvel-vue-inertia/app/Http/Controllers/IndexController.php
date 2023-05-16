@@ -22,4 +22,7 @@ class IndexController extends Controller
    public function show() {
       return inertia("Index/Show");
    }
+   public function search() {
+      return inertia("Index/Search");
+   }
 }

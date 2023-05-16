@@ -72,8 +72,9 @@ const handleSubmit = () => {
    if(searchForm.searchTerm === ""){
       showError.value = true
    } else {
-      searchForm.searchTerm = ""
       showSearch.value = false
+      searchForm.get(route("index.search"))
+      searchForm.searchTerm = ""
    }
 }
 </script>
