@@ -15,10 +15,6 @@ return new class extends Migration
          $table->id();
          $table->timestamps();
          $table->string("name")->unique();
-         $table->foreignIdFor(
-            \App\Models\Artwork::class,
-            "artwork_id"
-         )->constrained("artworks")->onDelete("cascade");
       });
    }
 

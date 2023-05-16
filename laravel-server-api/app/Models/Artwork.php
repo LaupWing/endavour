@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Artwork extends Model
 {
-    use HasFactory;
+   use HasFactory;
+   protected $fillable = [
+      "objectNumber",
+      "title",
+      "principalOrFirstMaker",
+      "longTitle",
+      "permitDownload"
+   ];
 }
