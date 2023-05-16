@@ -60,7 +60,6 @@ const router = useRouter()
 
 const loaded = ref<boolean>(false)
 const data = ref<ArtObjectType>()
-console.log(data)
 
 const init = async () => {
    data.value = await artWorkStore.fetchSingle()
