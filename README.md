@@ -71,3 +71,7 @@ To determine if a word is an anagram of another word, I need to check if every l
 
 ## Rijksmuseum
 > [Click here to see the live website](https://endavour.vercel.app/)
+
+For this assignment, I have decided to showcase the majority of my technical skills. I consider myself a versatile developer who has taught myself how to efficiently learn various technologies. In my opinion, a good developer is capable of seamlessly transitioning to different technologies at a moment's notice.
+
+Therefore, I have made the decided to develop the same application using various technologies.
