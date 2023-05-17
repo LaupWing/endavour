@@ -12,23 +12,40 @@ export const Grid:FC<GridProps> = ({
    index,
    artObject
 }) => {
+   const imageVariant = {
+      hidden: {
+         scaleX: 0.2,
+         opacity: 0
+      },
+      inView: {
+         scaleX: 1,
+         opacity: 1,
+         transition: {
+            duration: 0.6
+         }
+      }
+   }
+   const textVariant = {
+      hidden: {
+         opacity: 0
+      },
+      inView: {
+         opacity: 1,
+         transition: {
+            duration: 0.6,
+            delay: 0.5
+         }
+      }
+   }
    
    return (
-      <div
+      <motion.div
          className={`${index % 3 === 0 ? "col-span-2 aspect-video" : ""} flex flex-col justify-between`}
+         initial="hidden"
+         whileInView="inView"
       >
          <motion.div
-            initial={{
-               scaleX: 0.2,
-               opacity: 0
-            }}
-            whileInView={{
-               scaleX: 1,
-               opacity: 1,
-               transition: {
-                  duration: 0.6
-               }
-            }}
+            variants={imageVariant}
          >
             <ImageContainer 
                url={artObject.webImage.url}
@@ -37,17 +54,7 @@ export const Grid:FC<GridProps> = ({
          </motion.div>
          <motion.div 
             className="mt-2 leading-4 flex justify-between items-center"
-            initial={{
-               scaleX: 0.2,
-               opacity: 0
-            }}
-            whileInView={{
-               scaleX: 1,
-               opacity: 1,
-               transition: {
-                  duration: 0.6
-               }
-            }}
+            variants={textVariant}
          >
             <div className="flex flex-col">
                <p>{artObject.title}</p>
@@ -57,6 +64,6 @@ export const Grid:FC<GridProps> = ({
                <FiExternalLink className="text-accent cursor-pointer" size={16} />
             </a>
          </motion.div>
-      </div>
+      </motion.div>
    )
 }

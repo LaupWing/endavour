@@ -97,12 +97,12 @@ const Header = () => {
             </h1>
          </Link>
          <div className="flex items-center mr-1 md:mr-4">
-            <nav className="mr-8">
+            {/* <nav className="mr-8">
                <ul className="flex gap-4">
                   <li>Works</li>
                   <li>Artists</li>
                </ul>
-            </nav>
+            </nav> */}
             <button onClick={() => setShowSearch(true)}>
                <SearchIcon size={22}/>
             </button>
