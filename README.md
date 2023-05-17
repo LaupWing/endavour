@@ -1,5 +1,5 @@
 # Endeavour Assessments
-> This document outlines the decisions I made regarding technologies and code choices for the Endeavour assessments.
+> This document outlines the decisions I made regarding technologies and code choices for the Endeavour assessments. First assessment Anagram, second assessment Rijksmuseum api. 
 
 ## Anagram
 The first assessments involves taking an array of strings and determing which words in the list are exact anagrams of each other. Initially, I was not familiar with the concept of anagrams, so it took me a little while to grasp the concept.
@@ -61,3 +61,11 @@ const anagramz = input.reduce((previous: any, current, currentIndex, array) => {
 ```
 
 The first thing I noticed was that I needed to transform the array, **reducing** its length. Therefore, I chose to utilize the reduce array method.
+
+I checked within the `if` block whether the current iteration already exists in the array. If that is the case, nothing will be added, and the array will remain unmodified.
+
+If that is not the case, the anagram algorithm will start. To check if a certain word can be an anagram of another word, I need to split the word, remove whitespaces and store the individual letters separately in an array. This algorithm is stored in the variable `letterList`.
+
+To determine if a word is an anagram of another word, I need to check if every letter in the array is present in the target word. To solve this problem, I utilized the `every` method.
+
+
