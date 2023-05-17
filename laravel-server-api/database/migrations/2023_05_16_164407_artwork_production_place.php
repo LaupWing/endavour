@@ -11,8 +11,9 @@ return new class extends Migration
     */
    public function up(): void
    {
-      Schema::create("artwork_production_place", function (Blueprint $table) {
+      Schema::create("artwork_production_places", function (Blueprint $table) {
          $table->id();
+         $table->timestamps();
          $table->foreignIdFor(
             \App\Models\Artwork::class,
             "artwork_id"
@@ -29,6 +30,6 @@ return new class extends Migration
     */
    public function down(): void
    {
-      Schema::dropIfExists("artwork_production_place");
+      Schema::dropIfExists("artwork_production_places");
    }
 };

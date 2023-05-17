@@ -9,5 +9,8 @@ class ArtworkProductionPlace extends Model
 {
    use HasFactory;
 
-   
+   protected $fillable = [
+      "production_place_id",
+      "artwork_id"
+   ];
 }
