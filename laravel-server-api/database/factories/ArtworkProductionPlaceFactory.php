@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Artwork;
+use App\Models\ProductionPlace;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +19,8 @@ class ArtworkProductionPlaceFactory extends Factory
    public function definition(): array
    {
       return [
-         
+         "artwork_id" => Artwork::all()->random()->id,
+         "production_place_id" => ProductionPlace::all()->random()->id
       ];
    }
 }
