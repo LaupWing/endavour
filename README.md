@@ -92,7 +92,7 @@ I have developed the web application using the most popular and widely-used fram
 *  Not switching files. Constantly switching files takes your focus away from coding the actual application if you are constantly switching from CSS file to HTML.
 *  Easy to understand. Tailwind is easy to understand if you are familiar with CSS. One of the advantages is that you don't have to learn new class names since they closely resemble actual CSS syntaxes.
 
-### Installation
+### Installations
 For all of the installation it is required to insert your own api key in the `.env` file.
 
 ```
@@ -134,3 +134,8 @@ RIJKS_MUSEUM_APIKEY=YOUR_API_KEY
 
       4. run npm run dev
 </details>
+
+### Which framework I would choose to develop it, if I could only choose one.
+If I were to choose only one framework for developing the web application, I would choose Next.js 12. The main reason for this choice is the server-side rendering (SSR) capability of Next.js, which fetches code on the server and populates the page the user is currently on. This elminates the need to manually create loading states and loading components, enhancing the usesr experience.
+
+In addtion to SSR feature, Nextjs offers several advantages. It provides a seamless and efficient development experience, making it easy and fast to build web applications. Next.js also includes a well-designed boilerplate that includes Typescript support, saving time and effort when setting up a project.
