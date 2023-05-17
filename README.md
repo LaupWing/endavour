@@ -1,2 +1,2 @@
 # Endeavour Assignment
-> In this document you can read more about the decisions I made for the technologies and code choices I made for the Endeavour assignment
+> This document outlines the decisions I made regarding technologies and code choices for the Endeavour assignment.
