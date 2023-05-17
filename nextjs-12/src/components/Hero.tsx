@@ -28,7 +28,7 @@ export const Hero:FC<HeroProps> = ({
          transition: {
             ease: "easeOut",
             delay: 0.8,
-            duration: 0.8
+            duration: 0.8,
          }
       }
    }
