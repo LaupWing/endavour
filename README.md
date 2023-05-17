@@ -1,6 +1,18 @@
 # Endeavour Assessments
 > This document outlines the decisions I made regarding technologies and code choices for the Endeavour assessments. First assessment Anagram, second assessment Rijksmuseum api. 
 
+## Table of Contents
+1. [Anagram](#anagram)
+   - [Installation](#installation)
+   - [Solution](#solution)
+2. [Rijksmuseum](#rijksmuseum)
+   - [Installations](#installations)
+   - [Which framework I would choose to develop it, if I could only choose one.](#which-framework-i-would-choose-to-develop-it-if-i-could-only-choose-one)
+   - [Main points for choosing technology](#main-points-for-choosing-technology)
+   - [Pros and cons](#pros-and-cons)
+   - [API](#api)
+   - [Tables](#tables)
+
 ## Anagram
 The first assessments involves taking an array of strings and determing which words in the list are exact anagrams of each other. Initially, I was not familiar with the concept of anagrams, so it took me a little while to grasp the concept.
 
