@@ -85,4 +85,4 @@ Nextjs13 | ✔️
 Gatsby | ❌
 Wordpress | ❌ 
 
-I have developed the web application using the most popular and widely-used frameworks available at the current time.
+I have developed the web application using the most popular and widely-used frameworks available at the current time. However, due to time constraints that I set for myself, I did not include Gatsby and Wordpress in this assessment.
