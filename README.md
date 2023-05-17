@@ -5,7 +5,7 @@
 The first assessments involves taking an array of strings and determing which words in the list are exact anagrams of each other. Initially, I was not familiar with the concept of anagrams, so it took me a little while to grasp the concept.
 
 The goal of the assessment is to transform the given array from:
-```json
+```js
 [
    'rope',
    'pore',
@@ -18,7 +18,7 @@ The goal of the assessment is to transform the given array from:
 ]
 ```
 To the following format:
-```json
+```js
 [
    ['rope', 'pore', 'repo'],
    ['red rum', 'murder'],
