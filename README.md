@@ -139,3 +139,11 @@ RIJKS_MUSEUM_APIKEY=YOUR_API_KEY
 If I were to choose only one framework for developing the web application, I would choose Next.js 12. The main reason for this choice is the server-side rendering (SSR) capability of Next.js, which fetches code on the server and populates the page the user is currently on. This elminates the need to manually create loading states and loading components, enhancing the usesr experience.
 
 In addtion to SSR feature, Nextjs offers several advantages. It provides a seamless and efficient development experience, making it easy and fast to build web applications. Next.js also includes a well-designed boilerplate that includes Typescript support, saving time and effort when setting up a project.
+
+### Main points for choosing technology
+*  ☑️ What are the requirements for this project?
+   *  Does it need an api?
+   *  How big is this project?
+*  ⏲️ Speed. Speed of development is important
+*  🧑🏼‍🤝‍🧑🏼 Community. Is the community big? If the community is big it is easier to solve an bug.
+*  ♻️ Updated. Is the technology still getting updates?
