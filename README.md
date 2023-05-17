@@ -85,10 +85,8 @@ To determine if a word is an anagram of another word, I need to check if every l
 ## Rijksmuseum
 > [Click here to see the live website](https://endavour.vercel.app/)
 
-<div style="display: flex;">
-  <img src="images/desktop.PNG" alt="Desktop Image" style="width: 50%;">
-  <img src="images/mobile.PNG" alt="Mobile Image" style="width: 50%;">
-</div>
+![Desktop](images/desktop.PNG)
+![Mobile](images/mobile.PNG)
 
 For this assignment, I have decided to showcase the majority of my technical skills. I consider myself a versatile developer who has taught myself how to efficiently learn various technologies. In my opinion, a good developer is capable of seamlessly transitioning to different technologies at a moment's notice.
 
