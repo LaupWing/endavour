@@ -18,6 +18,6 @@ class Artwork extends Model
 
    public function productionPlaces()
    {
-      return $this->belongsToMany(ProductionPlace::class, "artwork_production_places");
+      return $this->belongsToMany(ProductionPlace::class, "artwork_production_places")->select("name");
    }
 }
