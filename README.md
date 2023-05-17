@@ -258,3 +258,6 @@ I would create 4 tables which will be:
 *  links
    *  web: `string`
    *  self: `string`
+*  artwork_production_places <- Junction table
+   * artwork_id: `string`
+   * production_place_id: `string`
