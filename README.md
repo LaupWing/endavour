@@ -188,3 +188,9 @@ Pros and cons of the frameworks in the context of this assessment.
 *  Very different from Nextjs 12
 *  It is new. So therefore there are bound to be some unexpected errors. (Which I encountered)
 *  Learning curve, because of the concept of server components
+
+
+### Api
+You may have noticed that there is also a Laravel API directory containing a Laravel API project. This project is not finished, because of the time constrained.
+
+Although this project is not finished, I can provide you with an example of how I would have created the relationships for the data from the Rijksoverheid API response.
