@@ -31,7 +31,7 @@ To the following format:
 ```
 1. Clone this repository
 
-2. cd into anagram
+2. cd into 📁 anagram
 
 3. run npm install (assuming you have nodejs installed)
 
@@ -87,11 +87,14 @@ Wordpress | ❌
 
 I have developed the web application using the most popular and widely-used frameworks available at the current time. However, due to time constraints that I set for myself, I did not include Gatsby and Wordpress in this assessment.
 
-## Installation
-```
-1. Go to the desired framework/project
+💨All of the created projects are using tailwind for styling. Why tailwind?
 
-2. run npm install inside the desired framework/project
+*  Not switching files. Constantly switching files takes your focus away from coding the actual application if you are constantly switching from CSS file to HTML.
+*  Easy to understand. Tailwind is easy to understand if you are familiar with CSS. One of the advantages is that you don't have to learn new class names since they closely resemble actual CSS syntaxes.
 
-3. Depending on the framework either run php artisan serve and npm run dev or just npm run dev
-```
+### Frameworks
+<details>
+  <summary>Intertia</summary>
+  This is the content that will be hidden/shown.
+  
+</details>
