@@ -12,6 +12,7 @@
    - [Pros and cons](#pros-and-cons)
    - [API](#api)
    - [Tables](#tables)
+2. [AI](#ai)
 
 ## Anagram
 The first assessments involves taking an array of strings and determing which words in the list are exact anagrams of each other. Initially, I was not familiar with the concept of anagrams, so it took me a little while to grasp the concept.
