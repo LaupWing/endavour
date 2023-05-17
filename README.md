@@ -78,11 +78,11 @@ Therefore, I have made the decided to develop the same application using various
 
 Technology | #finished 
 --- | --- 
-Intertia | ✔️ 
+Inertia | ✔️ 
 Vue3 | ✔️ 
 Nextjs12 | ✔️ 
 Nextjs13 | ✔️ 
 Gatsby | ❌
 Wordpress | ❌ 
 
-I have created the web application using the major and popular frameworks in the current time.
+I have developed the web application using the most popular and widely-used frameworks available at the current time.
