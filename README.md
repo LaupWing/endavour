@@ -149,6 +149,7 @@ In addtion to SSR feature, Nextjs offers several advantages. It provides a seaml
 *  ♻️ Updated. Is the technology still getting updates?
 
 ### Pros and cons
+Pros and cons of the frameworks in the context of this assessment.
 #### Inertia
 **pros**:
 *  Easy postgres/mysql database integration
@@ -158,3 +159,32 @@ In addtion to SSR feature, Nextjs offers several advantages. It provides a seaml
 **cons**:
 *  Steep learning curve
 *  Setup with typescript is complicated
+
+#### Vue3
+**pros**:
+*  Easy setup
+*  Easy to understand
+
+**cons**:
+*  Need to manage loading states
+*  Components in seperate files
+
+#### Nextjs 12
+**pros**:
+*  Easy setup
+*  Easy to understand
+*  Seamless typescript integration
+*  Multiple components in one file
+
+**cons**:
+*  Live website is kinda slow
+
+#### Nextjs 13
+**pros**:
+*  Easy setup
+
+**cons**:
+*  Typescript not fully supported
+*  Very different from Nextjs 12
+*  It is new. So therefore there are bound to be some unexpected errors. (Which I encountered)
+*  Learning curve, because of the concept of server components
