@@ -13,7 +13,7 @@ class ArtworkController extends Controller
     */
    public function index()
    {
-      $artworks = Artwork::with("productionPlaces")->get();
+      $artworks = Artwork::all();
       return response()->json($artworks);
    }
 
