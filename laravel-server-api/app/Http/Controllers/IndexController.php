@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Artwork;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -12,7 +13,8 @@ class IndexController extends Controller
     */
    public function index()
    {
-      //
+      $artworks = Artwork::with("productionPlaces")->get();
+      return response()->json($artworks);
    }
 
    /**
