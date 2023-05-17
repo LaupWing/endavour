@@ -1,5 +1,5 @@
 import { playfair } from "@/utils/fonts"
-import { FC } from "react"
+import { FC, Dispatch, SetStateAction } from "react"
 import { FiExternalLink } from "react-icons/fi"
 import { ImageContainer } from "./ImageContainer"
 import { useRouter } from "next/router"
@@ -7,10 +7,12 @@ import { motion } from "framer-motion"
 
 interface HeroProps {
    artObject: ArtObjectType
+   setAnimationEnded?: Dispatch<SetStateAction<boolean>>
 }
 
 export const Hero:FC<HeroProps> = ({
-   artObject
+   artObject,
+   setAnimationEnded
 }) => {
    const titleSplitted = artObject.title.split(" ")
    const lowerAmount =  Math.floor(titleSplitted.length / 3) 
@@ -120,6 +122,11 @@ export const Hero:FC<HeroProps> = ({
             variants={scaleYVariant}
             animate="show"
             initial="hidden"
+            onAnimationComplete={() => {
+               if(setAnimationEnded){
+                  setAnimationEnded(true)
+               }
+            }}
          >
             <ImageContainer 
                url={artObject.webImage.url}
