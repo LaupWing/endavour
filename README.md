@@ -194,3 +194,67 @@ Pros and cons of the frameworks in the context of this assessment.
 You may have noticed that there is also a Laravel API directory containing a Laravel API project. This project is not finished, because of the time constrained.
 
 Although this project is not finished, I can provide you with an example of how I would have created the relationships for the data from the Rijksoverheid API response.
+
+Below you see an art object from the Rijksoverheid API.
+```json
+{
+   "links":{
+      "self":"http://www.rijksmuseum.nl/api/nl/collection/BK-NM-1010",
+      "web":"http://www.rijksmuseum.nl/nl/collectie/BK-NM-1010"
+   },
+   "id":"nl-BK-NM-1010",
+   "objectNumber":"BK-NM-1010",
+   "title":"Poppenhuis van Petronella Oortman",
+   "hasImage":true,
+   "principalOrFirstMaker":"anoniem",
+   "longTitle":"Poppenhuis van Petronella Oortman, anoniem, ca. 1686 - ca. 1710",
+   "showImage":true,
+   "permitDownload":true,
+   "webImage":{
+      "guid":"8c3131da-1405-426f-9b23-5671a93920af",
+      "offsetPercentageX":0,
+      "offsetPercentageY":0,
+      "width":2500,
+      "height":2266,
+      "url":"https://lh3.ggpht.com/OIaBDlLOhgpAQHGdfYfIh0ygXRqgBNR-tW7se4OTwOtD6dsr6xLAmp8u_pfsqJ-0EqB_wbCF_0mvCl979lWxfFIyFQQ=s0"
+   },
+   "headerImage":{
+      "guid":"fde471c0-800c-4bea-b28e-a8523a1b643f",
+      "offsetPercentageX":0,
+      "offsetPercentageY":0,
+      "width":1920,
+      "height":460,
+      "url":"https://lh3.ggpht.com/QARSFMHdk59lhi0GnyZzxvqkt3rMLpYrBI8dXqEVjnbLgcb4PudxSzYaLxju5Juo4CzwwSC2wlq2ZDUMXw54tIhgmF0=s0"
+   },
+   "productionPlaces":[
+      "Amsterdam"
+   ]
+}
+```
+#### Tables
+I would create 4 tables which will be:
+*  artwork
+   *  objectNumber: `string`
+   *  title: `string`
+   *  hasImage: `boolean`
+   *  principalOrFirstMaker: `string`
+   *  longTitle: `text`
+   *  showImage: `boolean`
+   *  permitDownload: `boolean`
+*  web_image
+   *  guid: `string`
+   *  offsetPercentageX: `int`
+   *  offsetPercentageY: `int`
+   *  width: `int`
+   *  height: `int`
+   *  url: `string`
+*  header_image
+   *  guid: `string`
+   *  offsetPercentageX: `int`
+   *  offsetPercentageY: `int`
+   *  width: `int`
+   *  height: `int`
+   *  url: `string`
+*  links
+   *  web: `string`
+   *  self: `string`
