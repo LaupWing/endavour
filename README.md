@@ -92,9 +92,45 @@ I have developed the web application using the most popular and widely-used fram
 *  Not switching files. Constantly switching files takes your focus away from coding the actual application if you are constantly switching from CSS file to HTML.
 *  Easy to understand. Tailwind is easy to understand if you are familiar with CSS. One of the advantages is that you don't have to learn new class names since they closely resemble actual CSS syntaxes.
 
-### Frameworks
+### Installation
+For all of the installation it is required to insert your own api key in the `.env` file.
+
+```
+RIJKS_MUSEUM_APIKEY=YOUR_API_KEY
+```
 <details>
-  <summary>Intertia</summary>
-  This is the content that will be hidden/shown.
-  
+   <summary>Intertia</summary>
+      1. Clone this repository
+
+      2. cd into 📁 laravel-vue-inertia
+
+      3. run npm install (assuming you have nodejs installed)
+
+      4. run composer install
+
+      5. run php artisan serve
+
+      6. open another terminal and run npm run dev
+</details>
+
+<details>
+   <summary>Vue3</summary>
+      1. Clone this repository
+
+      2. cd into 📁 vue3
+
+      3. run npm install (assuming you have nodejs installed)
+
+      4. run npm run dev
+</details>
+
+<details>
+   <summary>Nextjs 13 & Nextjs 12</summary>
+      1. Clone this repository
+
+      2. cd into 📁 nextjs-13 or nextjs-12
+
+      3. run npm install (assuming you have nodejs installed)
+
+      4. run npm run dev
 </details>
