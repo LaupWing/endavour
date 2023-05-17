@@ -86,3 +86,12 @@ Gatsby | ❌
 Wordpress | ❌ 
 
 I have developed the web application using the most popular and widely-used frameworks available at the current time. However, due to time constraints that I set for myself, I did not include Gatsby and Wordpress in this assessment.
+
+## Installation
+```
+1. Go to the desired framework/project
+
+2. run npm install inside the desired framework/project
+
+3. Depending on the framework either run php artisan serve and npm run dev or just npm run dev
+```
