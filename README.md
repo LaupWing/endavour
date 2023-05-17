@@ -76,6 +76,13 @@ For this assignment, I have decided to showcase the majority of my technical ski
 
 Therefore, I have made the decided to develop the same application using various technologies.
 
-Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11
---- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
-Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269
+Technology | #finished 
+--- | --- 
+Intertia | ✔️ 
+Vue3 | ✔️ 
+Nextjs12 | ✔️ 
+Nextjs13 | ✔️ 
+Gatsby | ❌
+Wordpress | ❌ 
+
+I have created the web application using the major and popular frameworks in the current time.
