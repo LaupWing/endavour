@@ -273,3 +273,13 @@ I would create 4 tables which will be:
 *  artwork_production_places <- Junction table
    * artwork_id: `string`
    * production_place_id: `string`
+
+### AI
+I have used AI only during the second assessment. What I have noticed is that AI is good for generating boilerplate code, but not for building out the actual database or UI logic. The reason for this is that projects are large and live in separate files. To achieve the desired outcome with AI, you need to provide it with all the necessary context and ask the right questions.
+
+But in order to ask the right questions, you need to have a good grasp of programming fundamentals. For example, during the second assessment, I asked the AI to fetch data from the database. It provided me with code to retrieve all the data, but based on my programming knowledge, I realized that it wasn't the most efficient approach since it fetched a large amount of unnecessary data. This highlights the importance of understanding programming concepts and making informed decisions to optimize code performance.
+
+To summarize:
+
+*  To effectively utilize AI, it is essential to have a strong foundation in programming.
+*  AI can be particularly useful for generating boilerplate code, such as creating TypeScript types or generating simple components with pre-defined styling using Tailwind CSS.
