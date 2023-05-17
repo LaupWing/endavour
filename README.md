@@ -147,3 +147,13 @@ In addtion to SSR feature, Nextjs offers several advantages. It provides a seaml
 *  ⏲️ Speed. Speed of development is important
 *  🧑🏼‍🤝‍🧑🏼 Community. Is the community big? If the community is big it is easier to solve an bug.
 *  ♻️ Updated. Is the technology still getting updates?
+
+### Pros and cons
+#### Inertia
+**pros**:
+*  Easy postgres/mysql database integration
+*  Seamless vue integration
+*  No loading states
+**cons**:
+*  Steep learning curve
+*  Setup with typescript is complicated
