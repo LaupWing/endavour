@@ -154,6 +154,7 @@ In addtion to SSR feature, Nextjs offers several advantages. It provides a seaml
 *  Easy postgres/mysql database integration
 *  Seamless vue integration
 *  No loading states
+
 **cons**:
 *  Steep learning curve
 *  Setup with typescript is complicated
