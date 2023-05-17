@@ -6,23 +6,15 @@ use App\Http\Controllers\Controller;
 use App\Models\Artwork;
 use Illuminate\Http\Request;
 
-class IndexController extends Controller
+class ArtworkController extends Controller
 {
    /**
     * Display a listing of the resource.
     */
    public function index()
    {
-      $artworks = Artwork::with("productionPlaces")->get();
+      $artworks = Artwork::with("productionPlaces.name")->get();
       return response()->json($artworks);
-   }
-
-   /**
-    * Show the form for creating a new resource.
-    */
-   public function create()
-   {
-      //
    }
 
    /**
@@ -37,14 +29,6 @@ class IndexController extends Controller
     * Display the specified resource.
     */
    public function show(string $id)
-   {
-      //
-   }
-
-   /**
-    * Show the form for editing the specified resource.
-    */
-   public function edit(string $id)
    {
       //
    }
